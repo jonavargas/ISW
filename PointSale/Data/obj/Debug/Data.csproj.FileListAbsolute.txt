@@ -1,0 +1,9 @@
+C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data\bin\Debug\Data.dll.config
+C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data\bin\Debug\Data.dll
+C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data\bin\Debug\Data.pdb
+C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data\bin\Debug\EntityFramework.dll
+C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data\bin\Debug\EntityFramework.xml
+C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data\obj\Debug\Data.dll
+C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data\obj\Debug\Data.pdb
