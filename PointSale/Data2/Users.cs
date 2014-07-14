@@ -11,11 +11,16 @@ namespace Data2
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Users
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "Please enter the correct nickname", AllowEmptyStrings = false)]
         public string Nickname { get; set; }
+        [Required(ErrorMessage = "Please enter the correct password", AllowEmptyStrings = false)]
+        [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
         public string Password { get; set; }
+
     }
 }

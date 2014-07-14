@@ -59,6 +59,69 @@ namespace MVC.Controllers
             return View(users);
         }
 
+
+
+        //Login
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Users u)
+        {
+            //this action is for handle post (login)
+
+            if (ModelState.IsValid)
+            {//this is check validity
+
+                using (PointSaleEntities dc = new PointSaleEntities())
+                {
+
+                    var v = dc.Users.Where(a => a.Nickname.Equals(u.Nickname) && a.Password.Equals(u.Password)).FirstOrDefault();
+                    if (v != null)
+                    {
+                        Session["LogedUserID"] = v.Id.ToString();
+                        Session["LogedUserNickname"] = v.Nickname.ToString();
+                        return RedirectToAction("AfterLogin");
+                    }
+                }
+            }
+            return View(u);
+        }
+
+
+        public ActionResult AfterLogin()
+        {
+            if (Session["LogedUserID"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToRoute("index", "Main");
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //
         // GET: /Users/Edit/5
 

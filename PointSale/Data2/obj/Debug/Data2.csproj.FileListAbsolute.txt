@@ -7,3 +7,12 @@ C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data2\bin\Debug\es\Entit
 C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data2\obj\Debug\Data2.csprojResolveAssemblyReference.cache
 C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data2\obj\Debug\Data2.dll
 C:\Users\BRYAN19\Documents\GitHub\Project_ISW\PointSale\Data2\obj\Debug\Data2.pdb
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data2\bin\Debug\Data2.dll.config
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data2\bin\Debug\Data2.dll
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data2\bin\Debug\Data2.pdb
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data2\bin\Debug\EntityFramework.dll
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data2\bin\Debug\EntityFramework.xml
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data2\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data2\obj\Debug\Data2.csprojResolveAssemblyReference.cache
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data2\obj\Debug\Data2.dll
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data2\obj\Debug\Data2.pdb
