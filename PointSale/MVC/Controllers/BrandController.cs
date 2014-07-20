@@ -91,7 +91,7 @@ namespace MVC.Controllers
         //
         // GET: /Brand/Delete/5
 
-        public ActionResult Delete(string id = null)
+        public ActionResult Delete(string id )
         {
             Brand brand = db.Brand.Find(id);
             if (brand == null)
@@ -106,9 +106,9 @@ namespace MVC.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(string Name)
         {
-            Brand brand = db.Brand.Find(id);
+            Brand brand = db.Brand.Find(Name);
             db.Brand.Remove(brand);
             db.SaveChanges();
             return RedirectToAction("Index");

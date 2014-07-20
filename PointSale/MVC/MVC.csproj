@@ -323,16 +323,6 @@
     <Content Include="Views\BillDetail\Create.cshtml" />
     <Content Include="Views\BillDetail\Edit.cshtml" />
     <Content Include="Views\BillDetail\Delete.cshtml" />
-    <Content Include="Views\Brand\Index.cshtml" />
-    <Content Include="Views\Brand\Details.cshtml" />
-    <Content Include="Views\Brand\Create.cshtml" />
-    <Content Include="Views\Brand\Edit.cshtml" />
-    <Content Include="Views\Brand\Delete.cshtml" />
-    <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Category\Details.cshtml" />
-    <Content Include="Views\Category\Create.cshtml" />
-    <Content Include="Views\Category\Edit.cshtml" />
-    <Content Include="Views\Category\Delete.cshtml" />
     <Content Include="Views\Client\Index.cshtml" />
     <Content Include="Views\Client\Details.cshtml" />
     <Content Include="Views\Client\Create.cshtml" />
@@ -375,6 +365,16 @@
     <Content Include="Views\WarehouseProducts\Delete.cshtml" />
     <Content Include="Views\Users\Login.cshtml" />
     <Content Include="Views\Users\AfterLogin.cshtml" />
+    <Content Include="Views\Brand\Index.cshtml" />
+    <Content Include="Views\Brand\Details.cshtml" />
+    <Content Include="Views\Brand\Create.cshtml" />
+    <Content Include="Views\Brand\Edit.cshtml" />
+    <Content Include="Views\Brand\Delete.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Category\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
