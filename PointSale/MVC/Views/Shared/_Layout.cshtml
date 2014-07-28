@@ -19,72 +19,21 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Library", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("Library", "Index", "Main")</p>
                 </div>
+                
                 <div class="float-right">
                    
                     <nav>
-                        <div class="prod">
-                            <div class="btn-group">
-                                <button type="button" class="btn-custom" data-toggle="dropdown">
-                                    Products
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" />@Html.ActionLink("Products", "Index", "Products")</li>
-                                    <li>@Html.ActionLink("Category", "Index", "Category")</li>
-                                    <li>@Html.ActionLink("Brand", "Index", "Brand")</li>
-                                </ul>
-                            </div>
+                       
+                        
 
-                        </div>
-                        <div class="supli">
-                            <div class="btn-group">
-                                <button type="button" class="btn-custom" data-toggle="dropdown">
-                                    Suppliers
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" /> @Html.ActionLink("Suppliers", "Index", "Suppliers")</li>
-                                    <li>@Html.ActionLink("Search Supliers", "Index", "SearchSuppliers")</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="client">
-                            <div class="btn-group">
-                                <button type="button" class="btn-custom" data-toggle="dropdown">
-                                    Client
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" /> @Html.ActionLink("Client", "Index", "Client")</li>
-                                    <li>@Html.ActionLink("Search Client", "Index", "SearchClient")</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="emplo">
-                            <div class="btn-group">
-                                <button type="button" class="btn-custom" data-toggle="dropdown">
-                                    Employee
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" /> @Html.ActionLink("Employee", "Index", "Employee")</li>
-                                    <li>@Html.ActionLink("Search Employee", "Index", "SearchEmployee")</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="bill">
-                            <div class="btn-group">
-                                <button type="button" class="btn-custom" data-toggle="dropdown">
-                                    Bill
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" /> @Html.ActionLink("Bill", "Index", "Bill")</li>
-                                </ul>
-                            </div>
-                        </div>
+                        
+                        
+                        
+                        
+                      
+                      
                         <div class="login">
                             <div class="btn-group">
                                 <button type="button" class="btn-custom" data-toggle="dropdown">
@@ -93,32 +42,20 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" />@Html.ActionLink("Login", "Login", "Users")</li>
+                                    <li><a href="#" />@Html.ActionLink("Logout", "Logout", "Users")</li>
                                    
 
                                 </ul>
                             </div>
                         </div>
-
-                        <div class="warehouse">
-                            <div class="btn-group">
-                                <button type="button" class="btn-custom" data-toggle="dropdown">
-                                    Warehouse
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-
-                                    <li><a href="#" /> @Html.ActionLink("Warehouse", "Index", "Warehouse")</li>
-                                    <li><a href="#" /> @Html.ActionLink("Warehouse Products", "Index", "WarehouseProducts")</li>
-                                    <li>@Html.ActionLink("Search Products", "Index", "SearchProducts")</li>
-
-                                </ul>
-                            </div>
-                        </div>
-
+                
+                      
+                      
                     </nav>
+                     
                 </div>
             </div>
-
+        
         </header>
         <div id="body">
             @RenderSection("featured", required: false)
