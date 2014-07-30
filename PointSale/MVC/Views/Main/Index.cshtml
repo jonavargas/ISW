@@ -1,12 +1,62 @@
-﻿@{
-    ViewBag.Title = "";
-}
+﻿@model IEnumerable<Data2.Products>
 
-@section featured {
-    <section></section>
+    @{
+        ViewBag.Title = "";
+    }
 
-    <div class="img-library">
-        <img class="library" src="Content/img/libre.png" alt="Alternate Text" />
+    @section featured {
+        <section></section>
 
-    </div>
-}
+        <div class="Products">
+
+
+            <table class="table table-bordered">
+                <tr>
+                    <th>
+                        Product
+                    </th>
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        Cost Price
+                    </th>
+                    <th>
+                        Category
+                    </th>
+                    <th>
+                        Brand
+                    </th>
+                   
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Code)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CostPrice)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category1.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Brand1.Name)
+                        </td>
+                        
+                    </tr>
+                }
+
+            </table>
+
+
+
+
+
+        </div>
+    }
