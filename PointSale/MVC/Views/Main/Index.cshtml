@@ -4,8 +4,50 @@
         ViewBag.Title = "";
     }
 
-    @section featured {
-        <section></section>
+   <!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta charset="utf-8" />
+     <title>@ViewBag.Title - Library Paper Illusions</title>
+     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+     <meta name="viewport" content="width=device-width" />
+
+     @Styles.Render("~/Content/css")
+     @Scripts.Render("~/bundles/modernizr")
+     @Styles.Render("~/Content/css/index.css")
+     @Styles.Render("~/Content/css/bootstrap.css")
+     @Styles.Render("~/Content/css/bootstrap.min.css")
+     @Styles.Render("~/Content/css/bootstrap-theme.min.css")
+    
+</head>
+<body>
+
+    @section scripts
+
+{
+
+        <script>
+
+            $(function() {
+
+                $( "#datepicker" ).datepicker();
+
+            });
+        </script>
+    }
+
+    <p>Date: <input type="text" id="datepicker" /></p>
+
+</body>
+
+
+
+</html>
+
+ @section featured {
+ 
 
         <div class="Products">
 
@@ -59,4 +101,16 @@
 
 
         </div>
+
+
+
+
+    
+
+
+
+
+
+
+
     }

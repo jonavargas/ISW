@@ -4,6 +4,12 @@ html {
     padding: 0;
 }
 
+.Products{
+background-color:aquamarine;
+width:500px;
+height:500px;    
+}
+
 body {
     background-color: rgba(199, 209, 214, 0.91);
     border-top: solid 10px #000;
