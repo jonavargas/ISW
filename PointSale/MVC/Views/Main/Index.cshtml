@@ -1,10 +1,10 @@
-﻿@model MVC.Models.MainModels
+﻿@model IEnumerable<Data2.Products>
 
     @{
         ViewBag.Title = "";
     }
 
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -22,78 +22,95 @@
      @Styles.Render("~/Content/css/bootstrap-theme.min.css")
     
 </head>
-    <body>
+<body>
 
-        @section scripts{
-            <script>
-                $(function() {
+    @section scripts
 
-                    $( "#datepicker" ).datepicker();
-                });
-            </script>
-        }
-        <p>Date: <input type="text" id="datepicker" /></p>
-    </body>
+{
+
+        <script>
+
+            $(function() {
+
+                $( "#datepicker" ).datepicker();
+
+            });
+        </script>
+    }
+
+    <p>Date: <input type="text" id="datepicker" /></p>
+
+</body>
+
+
+
 </html>
 
-@section featured {
+ @section featured {
  
-    <div class="Products">
-
-        @using (Html.BeginForm())
-        {
-            @Html.ValidationSummary(true)
-
-            <div class="searchMain">
-                @Html.EditorFor(model => model.SearchText)
-            
-            <input type="submit" value="Search" />
-            </div>
-        }
 
         <div class="Products">
-            <table class="table table-hover">
-                <thead>
+
+
+            <table class="table table-bordered">
+                <tr>
+                    <th>
+                        Product
+                    </th>
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        Cost Price
+                    </th>
+                    <th>
+                        Category
+                    </th>
+                    <th>
+                        Brand
+                    </th>
+                   
+                </tr>
+
+                @foreach (var item in Model)
+                {
                     <tr>
-                        <td style="font-weight:bold">
-                            Code
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
                         </td>
-                        <td style="font-weight:bold">
-                            Product
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Code)
                         </td>
-                        <td style="font-weight:bold">
-                            Cost Price
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CostPrice)
                         </td>
-                        <td style="font-weight:bold">
-                            Category
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category1.Name)
                         </td>
-                        <td style="font-weight:bold">
-                            Brand
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Brand1.Name)
                         </td>
+                        
                     </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.Products)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Id)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Name)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CostPrice)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Category)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Brand)
-                            </td>
-                        </tr>
-                    }
+                }
+
             </table>
+
+
+
+
+
         </div>
-    </div>
-}
+
+
+
+
+    
+
+
+
+
+
+
+
+    }
