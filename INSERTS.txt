@@ -1,0 +1,965 @@
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Acme')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Tilibra')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('ECO')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Norma')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Faber Castell')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('BIC')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Facela')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('El Lider')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Pritt')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Mongol')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Scotch')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('3M')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Artel')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Maped')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Blamaros')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Brand]
+           ([Name])
+     VALUES
+           ('Bond')
+GO
+
+USE [PointSale]
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Lapiz')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Borrador')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Goma')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Tijeras')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Lapicero')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Cuaderno')
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Corrector')
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Cinta')
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Libreta')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Papel')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Hojas')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Tajador Maquinilla')
+GO
+
+INSERT INTO [dbo].[Category]
+           ([Name])
+     VALUES
+           ('Marcador')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Libreta',
+	    '001',
+            '1050',
+            'Libreta',
+            'Norma')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Libreta',
+	    '002',
+            '650',
+            'Libreta',
+            'Tilibra')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Tijeras',
+	    '003',
+            '600',
+            'Tijeras',
+            'Acme')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Lapiz',
+	    '004',
+            '150',
+            'Lapiz',
+            'Faber Castell')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Lapicero',
+            '005',
+            '350',
+            'Lapicero',
+            'Faber Castell')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Lapiz de Color',
+            '006',
+            '3550',
+            'Lapiz',
+            'Faber Castell')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Lapicero',
+            '007',
+            '550',
+            'Lapicero',
+            'BIC')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Cuaderno Resortes',
+            '008',
+            '1950',
+            'Cuaderno',
+            'Norma')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Cuaderno Resortes',
+            '009',
+            '1550',
+            'Cuaderno',
+            'Eco')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Cuaderno Cocido',
+            '010',
+            '950',
+            'Cuaderno',
+            'Eco')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Cuaderno Cocido',
+            '011',
+            '850',
+            'Cuaderno',
+            'El Lider')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Lapiz',
+            '012',
+            '110',
+            'Lapiz',
+            'BIC')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Lapiz',
+            '013',
+            '100',
+            'Lapiz',
+            'Mongol')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Borrador',
+            '014',
+            '150',
+            'Borrador',
+            'Faber Castell')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Corrector',
+            '015',
+            '450',
+            'Corrector',
+            'BIC')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Cinta',
+            '016',
+            '1250',
+            'Cinta',
+            'Scotch')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Cinta',
+            '017',
+            '1450',
+            'Cinta',
+            '3M')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Papel Seda',
+            '018',
+            '100',
+            'Papel',
+            'Artel')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Tajador - Maquinilla',
+            '019',
+            '250',
+            'Tajador Maquinilla',
+            'Maped')
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Papel Construccion',
+            '020',
+            '1300',
+            'Papel',
+            'Blamaros')
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Hojas Blancas',
+            '021',
+            '800',
+            'Hojas',
+            'Bond')
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Goma',
+            '022',
+            '750',
+            'Goma',
+            'Pritt')
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Lapicero',
+            '023',
+            '250',
+            'Lapicero',
+            'BIC')
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Code]
+           ,[CostPrice]
+           ,[Category]
+           ,[Brand])
+     VALUES
+           ('Marcador',
+            '024',
+            '550',
+            'Marcador',
+            'Faber Castell')
+GO
+
+USE PointSale
+INSERT INTO Users
+   VALUES('Jona', '12345');
+
+USE PointSale
+INSERT INTO Users
+   VALUES('Ericka', '12345');
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Employee]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Ericka',
+            'Jimenez',
+            'Barquero',
+            'Ciudad Quesada',
+            '88040288')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Employee]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Jonathan',
+            'Vargas',
+            'Alvarado',
+            'Ciudad Quesada',
+            '61850931')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Employee]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Bryan',
+            'Chavez',
+            'Salas',
+            'Sucre',
+            '83285288')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Maikol',
+            'Aguilar',
+            'Marin',
+            'San Martin',
+            '24611265')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Jean Carlos',
+            'Rojas',
+            'Marin',
+            'Gamonales',
+            '24604258')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Juan',
+            'Lopez',
+            'Hernandez',
+            'Lourdes',
+            '24605237')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Wendy',
+            'Barrantes',
+            'Alvarado',
+            'Campo',
+            '24616382')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Jean Carlos',
+            'Chacon',
+            'Castro',
+            'Union',
+            '24605327')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Elias',
+            'Leiton',
+            'Taleno',
+            'Maracana',
+            '24605377')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Andres',
+            'Barrantes',
+            'Badilla',
+            'San Martin',
+            '24605268')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Ruben',
+            'Jimenez',
+            'Morera',
+            'Fortuna',
+            '24626245')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Marianela',
+            'Jimenez',
+            'Barquero',
+            'Lourdes',
+            '24605299')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Jazmin',
+            'Vargas',
+            'Alvarado',
+            'Lourdes',
+            '24604558')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Client]
+           ([Name]
+           ,[Lastname1]
+           ,[Lastname2]
+           ,[Address]
+           ,[Telephone])
+     VALUES
+           ('Fabiola',
+            'Suarez',
+            'Zamora',
+            'San Juan',
+            '24608842')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Suppliers]
+           ([Name]
+           ,[Telephone]
+           ,[Address]
+           ,[Detail])
+     VALUES
+           ('Copyvision',
+            '24759823',
+            'Guapiles',
+            'Papeleria')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Suppliers]
+           ([Name]
+           ,[Telephone]
+           ,[Address]
+           ,[Detail])
+     VALUES
+           ('Susaeta',
+            '25232354',
+            'San Jose',
+            'Articulos de libreria')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Suppliers]
+           ([Name]
+           ,[Telephone]
+           ,[Address]
+           ,[Detail])
+     VALUES
+           ('La Oficina',
+            '24619823',
+            'Ciudad Quesada',
+            'Articulos de libreria y papeleria')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Suppliers]
+           ([Name]
+           ,[Telephone]
+           ,[Address]
+           ,[Detail])
+     VALUES
+           ('Piramide',
+            '24602432',
+            'Ciudad Quesada',
+            'Articulos de libreria y papeleria')
+GO
+
+USE [PointSale]
+GO
+
+INSERT INTO [dbo].[Suppliers]
+           ([Name]
+           ,[Telephone]
+           ,[Address]
+           ,[Detail])
+     VALUES
+           ('Publicaciones de Costa Rica',
+            '24538734',
+            'Alajuela',
+            'Papeleria')
+GO

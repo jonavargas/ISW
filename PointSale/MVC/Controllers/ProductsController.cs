@@ -122,8 +122,8 @@ namespace MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            WarehouseProducts warehouseproducts = db.WarehouseProducts.Find(id);
-            db.WarehouseProducts.Remove(warehouseproducts);
+             //WarehouseProducts warehouseproducts = db.WarehouseProducts.Find(id);
+            //db.WarehouseProducts.Remove(warehouseproducts);
 
 
 
