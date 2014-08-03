@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data2;
+using Data3;
 
 namespace MVC.Controllers
 {
@@ -16,12 +16,18 @@ namespace MVC.Controllers
         //
         // GET: /BillDetail/
 
-        public ActionResult Index()
+        public ActionResult Index(String Criterion = null)
         {
             var billdetail = db.BillDetail.Include(b => b.Bill1);
-            return View(billdetail.ToList());
-        }
 
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("BillDetailParcial", billdetail.Where(p => Criterion == null || p.Bill1.Client1.Name.StartsWith(Criterion)).ToList());
+            }
+
+            return View(billdetail.Where(p => Criterion == null || p.Bill1.Client1.Name.StartsWith(Criterion)).ToList());
+
+        }
         //
         // GET: /BillDetail/Details/5
 

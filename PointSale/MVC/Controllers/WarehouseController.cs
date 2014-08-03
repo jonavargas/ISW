@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data2;
+using Data3;
 
 namespace MVC.Controllers
 {
@@ -16,9 +16,14 @@ namespace MVC.Controllers
         //
         // GET: /Warehouse/
 
-        public ActionResult Index()
+        public ActionResult Index(String Criterion = null)
         {
-            return View(db.Warehouse.ToList());
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("WarehouseParcial", db.Warehouse.Where(b => Criterion == null || b.Description.StartsWith(Criterion)).ToList());
+            }
+
+            return View(db.Warehouse.Where(p => Criterion == null || p.Description.StartsWith(Criterion)).ToList());
         }
 
         //

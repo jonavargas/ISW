@@ -102,7 +102,6 @@ C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\System.Web.W
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\EntityFramework.dll
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\System.Web.Optimization.dll
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\Data2.dll
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\MVC.pdb
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\System.Net.Http.Formatting.xml
@@ -119,7 +118,6 @@ C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\Microsoft.Da
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\Microsoft.Data.OData.xml
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\System.Spatial.xml
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\EntityFramework.xml
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\Data2.pdb
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\es\System.Net.Http.Formatting.resources.dll
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\es\System.Web.Helpers.resources.dll
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\es\System.Web.Http.resources.dll
@@ -244,3 +242,5 @@ C:\Users\BRYAN19\Documents\ISW\PointSale\MVC.Tests\bin\Debug\es\System.Web.Optim
 C:\Users\BRYAN19\Documents\ISW\PointSale\MVC.Tests\obj\Debug\MVC.Tests.csprojResolveAssemblyReference.cache
 C:\Users\BRYAN19\Documents\ISW\PointSale\MVC.Tests\obj\Debug\MVC.Tests.dll
 C:\Users\BRYAN19\Documents\ISW\PointSale\MVC.Tests\obj\Debug\MVC.Tests.pdb
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\Data3.dll
+C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC.Tests\bin\Debug\Data3.pdb

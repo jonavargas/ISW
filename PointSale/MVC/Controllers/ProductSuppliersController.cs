@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data2;
+using Data3;
 
 namespace MVC.Controllers
 {
@@ -16,10 +16,19 @@ namespace MVC.Controllers
         //
         // GET: /ProductSuppliers/
 
-        public ActionResult Index()
+        public ActionResult Index(String Criterion = null)
         {
             var productsuppliers = db.ProductSuppliers.Include(p => p.Products).Include(p => p.Suppliers);
-            return View(productsuppliers.ToList());
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("ProductSuppliersParcial", productsuppliers.Where(p => Criterion == null || p.Supplier.StartsWith(Criterion)).ToList());
+            }
+
+            return View(productsuppliers.Where(p => Criterion == null || p.Supplier.StartsWith(Criterion)).ToList());
+
+
+
         }
 
         //

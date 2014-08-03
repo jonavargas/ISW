@@ -4,7 +4,7 @@ html {
     padding: 0;
 }
 
-.Products{
+#MainProductsList{
 background-color:aquamarine;
 width:500px;
 height:500px;    

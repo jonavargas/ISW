@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data2;
+using Data3;
 
 namespace MVC.Controllers
 {
@@ -16,9 +16,14 @@ namespace MVC.Controllers
         //
         // GET: /Users/
 
-        public ActionResult Index()
+        public ActionResult Index(String Criterion = null)
         {
-            return View(db.Users.ToList());
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("UsersParcial", db.Users.Where(b => Criterion == null || b.Nickname.StartsWith(Criterion)).ToList());
+            }
+
+            return View(db.Users.Where(p => Criterion == null || p.Nickname.StartsWith(Criterion)).ToList());
         }
 
         //
@@ -58,70 +63,6 @@ namespace MVC.Controllers
 
             return View(users);
         }
-
-
-
-        //Login
-        public ActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Login(Users u)
-        {
-            //this action is for handle post (login)
-
-            if (ModelState.IsValid)
-            {//this is check validity
-
-                using (PointSaleEntities dc = new PointSaleEntities())
-                {
-
-                    var v = dc.Users.Where(a => a.Nickname.Equals(u.Nickname) && a.Password.Equals(u.Password)).FirstOrDefault();
-                    if (v != null)
-                    {
-                        Session["LogedUserID"] = v.Id.ToString();
-                        Session["LogedUserNickname"] = v.Nickname.ToString();
-                        return RedirectToAction("AfterLogin");
-                    }
-                }
-            }
-            return View(u);
-        }
-
-
-        public ActionResult AfterLogin()
-        {
-            if (Session["LogedUserID"] != null)
-            {
-                return View();
-            }
-            else
-            {
-                return RedirectToRoute("index", "Main");
-            }
-
-
-
-        }
-
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
 
         //
         // GET: /Users/Edit/5

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Data3.Suppliers>
+
+<div id="SuppliersList">
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                Supplier
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Detail)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Detail)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Name }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Name }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Name })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
+</div>

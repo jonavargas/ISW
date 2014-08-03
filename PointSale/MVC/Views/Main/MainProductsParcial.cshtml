@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Data3.Products>
+<div id="MainProductsList">
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                Product
+            </th>
+            <th>
+                Code
+            </th>
+            <th>
+                Cost Price
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Brand
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CostPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category1.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand1.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Add", "Edit", new { id = item.Id })
+
+                </td>
+
+
+            </tr>
+        }
+
+    </table>
+
+
+
+
+
+
+</div>

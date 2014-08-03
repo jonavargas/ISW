@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data2;
+using Data3;
 
 namespace MVC.Controllers
 {
@@ -16,10 +16,18 @@ namespace MVC.Controllers
         //
         // GET: /Bill/
 
-        public ActionResult Index()
+        public ActionResult Index(String Criterion = null)
         {
             var bill = db.Bill.Include(b => b.Client1).Include(b => b.Employee1).Include(b => b.BillDetail);
-            return View(bill.ToList());
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("BillParcial", bill.Where(p => Criterion == null || p.Client1.Name.StartsWith(Criterion)).ToList());
+            }
+
+            return View(bill.Where(p => Criterion == null || p.Client1.Name.StartsWith(Criterion)).ToList());
+
+
         }
 
         //
@@ -42,7 +50,7 @@ namespace MVC.Controllers
         {
             ViewBag.Client = new SelectList(db.Client, "Id", "Name");
             ViewBag.Employee = new SelectList(db.Employee, "Id", "Name");
-            ViewBag.Id = new SelectList(db.BillDetail, "Bill", "Bill");
+            ViewBag.Id = new SelectList(db.BillDetail, "Bill", "Product");
             return View();
         }
 
@@ -62,7 +70,7 @@ namespace MVC.Controllers
 
             ViewBag.Client = new SelectList(db.Client, "Id", "Name", bill.Client);
             ViewBag.Employee = new SelectList(db.Employee, "Id", "Name", bill.Employee);
-            ViewBag.Id = new SelectList(db.BillDetail, "Bill", "Bill", bill.Id);
+            ViewBag.Id = new SelectList(db.BillDetail, "Bill", "Product", bill.Id);
             return View(bill);
         }
 
@@ -78,7 +86,7 @@ namespace MVC.Controllers
             }
             ViewBag.Client = new SelectList(db.Client, "Id", "Name", bill.Client);
             ViewBag.Employee = new SelectList(db.Employee, "Id", "Name", bill.Employee);
-            ViewBag.Id = new SelectList(db.BillDetail, "Bill", "Bill", bill.Id);
+            ViewBag.Id = new SelectList(db.BillDetail, "Bill", "Product", bill.Id);
             return View(bill);
         }
 
@@ -97,7 +105,7 @@ namespace MVC.Controllers
             }
             ViewBag.Client = new SelectList(db.Client, "Id", "Name", bill.Client);
             ViewBag.Employee = new SelectList(db.Employee, "Id", "Name", bill.Employee);
-            ViewBag.Id = new SelectList(db.BillDetail, "Bill", "Bill", bill.Id);
+            ViewBag.Id = new SelectList(db.BillDetail, "Bill", "Product", bill.Id);
             return View(bill);
         }
 

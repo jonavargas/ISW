@@ -1,116 +1,25 @@
-﻿@model IEnumerable<Data2.Products>
+﻿@model IEnumerable<Data3.Products>
 
-    @{
-        ViewBag.Title = "";
-    }
+@{
+    ViewBag.Title = "Index";
+}
 
-   <!DOCTYPE html>
-<html lang="es">
+<h2>Index</h2>
 
-<head>
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-     <meta charset="utf-8" />
-     <title>@ViewBag.Title - Library Paper Illusions</title>
-     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-     <meta name="viewport" content="width=device-width" />
 
-     @Styles.Render("~/Content/css")
-     @Scripts.Render("~/bundles/modernizr")
-     @Styles.Render("~/Content/css/index.css")
-     @Styles.Render("~/Content/css/bootstrap.css")
-     @Styles.Render("~/Content/css/bootstrap.min.css")
-     @Styles.Render("~/Content/css/bootstrap-theme.min.css")
-    
-</head>
-<body>
+@using (Ajax.BeginForm(new AjaxOptions { 
 
-    @section scripts
+    HttpMethod="get",
+    InsertionMode =InsertionMode.Replace, 
+    UpdateTargetId="MainProductsList"
 
+                                                    }))
 {
+<input  type="text" name="Criterion" />
+    <input  type="submit" value="Search"  id="Search"/>
 
-        <script>
-
-            $(function() {
-
-                $( "#datepicker" ).datepicker();
-
-            });
-        </script>
-    }
-
-    <p>Date: <input type="text" id="datepicker" /></p>
-
-</body>
+}
+@Html.Partial("MainProductsParcial")
 
 
 
-</html>
-
- @section featured {
- 
-
-        <div class="Products">
-
-
-            <table class="table table-bordered">
-                <tr>
-                    <th>
-                        Product
-                    </th>
-                    <th>
-                        Code
-                    </th>
-                    <th>
-                        Cost Price
-                    </th>
-                    <th>
-                        Category
-                    </th>
-                    <th>
-                        Brand
-                    </th>
-                   
-                </tr>
-
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Code)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CostPrice)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Category1.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Brand1.Name)
-                        </td>
-                        
-                    </tr>
-                }
-
-            </table>
-
-
-
-
-
-        </div>
-
-
-
-
-    
-
-
-
-
-
-
-
-    }

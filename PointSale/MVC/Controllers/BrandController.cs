@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data2;
+using Data3;
 
 namespace MVC.Controllers
 {
@@ -16,9 +16,18 @@ namespace MVC.Controllers
         //
         // GET: /Brand/
 
-        public ActionResult Index()
+        public ActionResult Index(String Criterion = null)
         {
-            return View(db.Brand.ToList());
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("BrandParcial", db.Brand.Where(b => Criterion == null || b.Name.StartsWith(Criterion)).ToList());
+            }
+
+            return View(db.Brand.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
+
+
+
+
         }
 
         //
@@ -91,7 +100,7 @@ namespace MVC.Controllers
         //
         // GET: /Brand/Delete/5
 
-        public ActionResult Delete(string id )
+        public ActionResult Delete(string id = null)
         {
             Brand brand = db.Brand.Find(id);
             if (brand == null)
@@ -106,9 +115,9 @@ namespace MVC.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string Name)
+        public ActionResult DeleteConfirmed(string id)
         {
-            Brand brand = db.Brand.Find(Name);
+            Brand brand = db.Brand.Find(id);
             db.Brand.Remove(brand);
             db.SaveChanges();
             return RedirectToAction("Index");

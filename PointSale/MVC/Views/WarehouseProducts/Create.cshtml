@@ -1,4 +1,4 @@
-﻿@model Data2.WarehouseProducts
+﻿@model Data3.WarehouseProducts
 
 @{
     ViewBag.Title = "Create";
@@ -30,11 +30,11 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Warehouse1, "Warehouse")
+            @Html.LabelFor(model => model.Warehouse, "Warehouse1")
         </div>
         <div class="editor-field">
-            @Html.DropDownList("Warehouse" )
-            @Html.ValidationMessageFor(model => model.Warehouse1.Id)
+            @Html.DropDownList("Warehouse", String.Empty)
+            @Html.ValidationMessageFor(model => model.Warehouse)
         </div>
 
         <p>
