@@ -1,41 +1,44 @@
 ﻿@model Data3.Suppliers
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Details Supplier";
 }
 
-<h2>Details</h2>
+<h2>Details Supplier</h2>
 
 <fieldset>
     <legend>Suppliers</legend>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Name)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Telephone)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Telephone)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Address)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Address)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Detail)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Detail)
-    </div>
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.LabelForModel("Supplier Name")
+            </th>
+            <th>
+                @Html.LabelForModel("Phone")
+            </th>
+            <th>
+                @Html.LabelForModel("Address")
+            </th>
+            <th>
+                @Html.LabelForModel("Detail")
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Detail)
+            </td>
+        </tr>
+    </table>
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |

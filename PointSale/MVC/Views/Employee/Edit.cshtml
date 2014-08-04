@@ -1,22 +1,23 @@
 ﻿@model Data3.Employee
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Employee";
 }
 
-<h2>Edit</h2>
+<h2>Edit Employee</h2>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Employee</legend>
+        <legend>Edit</legend>
 
         @Html.HiddenFor(model => model.Id)
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
+            @Html.LabelForModel("Name")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Name)
@@ -24,7 +25,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Lastname1)
+            @Html.LabelForModel("Last Name 1")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Lastname1)
@@ -32,7 +33,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Lastname2)
+            @Html.LabelForModel("Last Name 2")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Lastname2)
@@ -40,7 +41,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Address)
+            @Html.LabelForModel("Address")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Address)
@@ -48,7 +49,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Telephone)
+            @Html.LabelForModel("Phone")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Telephone)

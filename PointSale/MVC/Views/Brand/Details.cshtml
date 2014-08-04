@@ -1,20 +1,26 @@
 ﻿@model Data3.Brand
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Details Brand";
 }
 
-<h2>Details</h2>
+<h2>Details Brand</h2>
 
 <fieldset>
     <legend>Brand</legend>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Name)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
-    </div>
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.LabelForModel("Name")
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Name)
+            </td>
+        </tr>
+    </table> 
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |

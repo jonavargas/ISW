@@ -31,5 +31,6 @@ namespace Data3
         public virtual Category Category1 { get; set; }
         public virtual ICollection<ProductSuppliers> ProductSuppliers { get; set; }
         public virtual ICollection<WarehouseProducts> WarehouseProducts { get; set; }
+
     }
 }
