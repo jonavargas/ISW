@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data3;
+using Data;
 
 namespace MVC.Controllers
 {
@@ -29,7 +29,7 @@ namespace MVC.Controllers
         //
         // GET: /Category/Details/5
 
-        public ActionResult Details(string id = null)
+        public ActionResult Details(int id = 0)
         {
             Category category = db.Category.Find(id);
             if (category == null)
@@ -67,7 +67,7 @@ namespace MVC.Controllers
         //
         // GET: /Category/Edit/5
 
-        public ActionResult Edit(string id = null)
+        public ActionResult Edit(int id = 0)
         {
             Category category = db.Category.Find(id);
             if (category == null)
@@ -96,7 +96,7 @@ namespace MVC.Controllers
         //
         // GET: /Category/Delete/5
 
-        public ActionResult Delete(string id = null)
+        public ActionResult Delete(int id = 0)
         {
             Category category = db.Category.Find(id);
             if (category == null)
@@ -111,7 +111,7 @@ namespace MVC.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Category category = db.Category.Find(id);
             db.Category.Remove(category);

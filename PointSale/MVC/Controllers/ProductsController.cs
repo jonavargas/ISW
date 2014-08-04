@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data3;
+using Data;
 
 namespace MVC.Controllers
 {
@@ -45,8 +45,8 @@ namespace MVC.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.Brand = new SelectList(db.Brand, "Name", "Name");
-            ViewBag.Category = new SelectList(db.Category, "Name", "Name");
+            ViewBag.Brand = new SelectList(db.Brand, "Id", "Name");
+            ViewBag.Category = new SelectList(db.Category, "Id", "Name");
             return View();
         }
 
@@ -64,8 +64,8 @@ namespace MVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Brand = new SelectList(db.Brand, "Name", "Name", products.Brand);
-            ViewBag.Category = new SelectList(db.Category, "Name", "Name", products.Category);
+            ViewBag.Brand = new SelectList(db.Brand, "Id", "Name", products.Brand);
+            ViewBag.Category = new SelectList(db.Category, "Id", "Name", products.Category);
             return View(products);
         }
 
@@ -79,8 +79,8 @@ namespace MVC.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Brand = new SelectList(db.Brand, "Name", "Name", products.Brand);
-            ViewBag.Category = new SelectList(db.Category, "Name", "Name", products.Category);
+            ViewBag.Brand = new SelectList(db.Brand, "Id", "Name", products.Brand);
+            ViewBag.Category = new SelectList(db.Category, "Id", "Name", products.Category);
             return View(products);
         }
 
@@ -97,8 +97,8 @@ namespace MVC.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Brand = new SelectList(db.Brand, "Name", "Name", products.Brand);
-            ViewBag.Category = new SelectList(db.Category, "Name", "Name", products.Category);
+            ViewBag.Brand = new SelectList(db.Brand, "Id", "Name", products.Brand);
+            ViewBag.Category = new SelectList(db.Category, "Id", "Name", products.Category);
             return View(products);
         }
 
@@ -122,11 +122,6 @@ namespace MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-             //WarehouseProducts warehouseproducts = db.WarehouseProducts.Find(id);
-            //db.WarehouseProducts.Remove(warehouseproducts);
-
-
-
             Products products = db.Products.Find(id);
             db.Products.Remove(products);
             db.SaveChanges();

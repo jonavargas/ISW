@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5DD5774D-9CE3-4880-8DAB-FB5907E9B323}</ProjectGuid>
+    <ProjectGuid>{B29CFEF1-58EF-418F-8A57-78CFB84CC47D}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -44,8 +44,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -183,6 +181,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BillController.cs" />
     <Compile Include="Controllers\BillDetailController.cs" />
     <Compile Include="Controllers\BrandController.cs" />
@@ -209,7 +208,6 @@
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\index.css" />
-    <Content Include="Content\img\libre.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -286,9 +284,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -311,41 +307,54 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Bill\Details.cshtml" />
-    <Content Include="Views\Bill\Create.cshtml" />
-    <Content Include="Views\Bill\Edit.cshtml" />
-    <Content Include="Views\Bill\Delete.cshtml" />
+    <Content Include="Views\BillDetail\Index.cshtml" />
     <Content Include="Views\BillDetail\Details.cshtml" />
     <Content Include="Views\BillDetail\Create.cshtml" />
     <Content Include="Views\BillDetail\Edit.cshtml" />
     <Content Include="Views\BillDetail\Delete.cshtml" />
+    <Content Include="Views\Brand\Index.cshtml" />
     <Content Include="Views\Brand\Details.cshtml" />
     <Content Include="Views\Brand\Create.cshtml" />
     <Content Include="Views\Brand\Edit.cshtml" />
     <Content Include="Views\Brand\Delete.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Category\Details.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Category\Delete.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
     <Content Include="Views\Client\Details.cshtml" />
     <Content Include="Views\Client\Create.cshtml" />
     <Content Include="Views\Client\Edit.cshtml" />
     <Content Include="Views\Client\Delete.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\Details.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
     <Content Include="Views\Employee\Delete.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\ProductSuppliers\Index.cshtml" />
     <Content Include="Views\ProductSuppliers\Details.cshtml" />
     <Content Include="Views\ProductSuppliers\Create.cshtml" />
     <Content Include="Views\ProductSuppliers\Edit.cshtml" />
     <Content Include="Views\ProductSuppliers\Delete.cshtml" />
+    <Content Include="Views\Suppliers\Index.cshtml" />
     <Content Include="Views\Suppliers\Details.cshtml" />
     <Content Include="Views\Suppliers\Create.cshtml" />
     <Content Include="Views\Suppliers\Edit.cshtml" />
@@ -355,39 +364,36 @@
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Warehouse\Index.cshtml" />
     <Content Include="Views\Warehouse\Details.cshtml" />
     <Content Include="Views\Warehouse\Create.cshtml" />
     <Content Include="Views\Warehouse\Edit.cshtml" />
     <Content Include="Views\Warehouse\Delete.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Bill\Index.cshtml" />
+    <Content Include="Views\Bill\Details.cshtml" />
+    <Content Include="Views\Bill\Create.cshtml" />
+    <Content Include="Views\Bill\Edit.cshtml" />
+    <Content Include="Views\Bill\Delete.cshtml" />
+    <Content Include="Views\Bill\BillParcial.cshtml" />
+    <Content Include="Views\BillDetail\BillDetailParcial.cshtml" />
+    <Content Include="Views\Brand\BrandParcial.cshtml" />
+    <Content Include="Views\Category\CategoryParcial.cshtml" />
+    <Content Include="Views\Client\ClientParcial.cshtml" />
+    <Content Include="Views\Employee\EmployeeParcial.cshtml" />
+    <Content Include="Views\Products\ProductsParcial.cshtml" />
+    <Content Include="Views\ProductSuppliers\ProductSuppliersParcial.cshtml" />
+    <Content Include="Views\Suppliers\SuppliersParcial.cshtml" />
+    <Content Include="Views\Users\UsersParcial.cshtml" />
+    <Content Include="Views\Warehouse\WarehouseParcial.cshtml" />
+    <Content Include="Views\WarehouseProducts\Index.cshtml" />
     <Content Include="Views\WarehouseProducts\Details.cshtml" />
     <Content Include="Views\WarehouseProducts\Create.cshtml" />
     <Content Include="Views\WarehouseProducts\Edit.cshtml" />
     <Content Include="Views\WarehouseProducts\Delete.cshtml" />
-    <Content Include="Views\Bill\BillParcial.cshtml" />
-    <Content Include="Views\Bill\Index.cshtml" />
-    <Content Include="Views\BillDetail\BillDetailParcial.cshtml" />
-    <Content Include="Views\BillDetail\Index.cshtml" />
-    <Content Include="Views\Brand\BrandParcial.cshtml" />
-    <Content Include="Views\Brand\Index.cshtml" />
-    <Content Include="Views\Category\CategoryParcial.cshtml" />
-    <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Client\ClientParcial.cshtml" />
-    <Content Include="Views\Client\Index.cshtml" />
-    <Content Include="Views\Employee\EmployeeParcial.cshtml" />
-    <Content Include="Views\Employee\Index.cshtml" />
-    <Content Include="Views\Products\ProductsParcial.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
-    <Content Include="Views\ProductSuppliers\ProductSuppliersParcial.cshtml" />
-    <Content Include="Views\ProductSuppliers\Index.cshtml" />
-    <Content Include="Views\Suppliers\SuppliersParcial.cshtml" />
-    <Content Include="Views\Suppliers\Index.cshtml" />
-    <Content Include="Views\Warehouse\Index.cshtml" />
-    <Content Include="Views\Warehouse\WarehouseParcial.cshtml" />
-    <Content Include="Views\WarehouseProducts\Index.cshtml" />
     <Content Include="Views\WarehouseProducts\WarehouseProductsParcial.cshtml" />
-    <Content Include="Views\Main\MainProductsParcial.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Users\UsersParcial.cshtml" />
+    <Content Include="Views\Main\MainProductsParcial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -396,13 +402,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data3\Data3.csproj">
-      <Project>{b044e11f-327b-4648-850e-742c3fff739e}</Project>
-      <Name>Data3</Name>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{3eb4ed61-9dc6-4adf-80a0-736599b4e08e}</Project>
+      <Name>Data</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -420,7 +423,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>6651</DevelopmentServerPort>
+          <DevelopmentServerPort>5689</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:6651/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data3;
+using Data;
 
 namespace MVC.Controllers
 {
@@ -25,6 +25,7 @@ namespace MVC.Controllers
 
             return View(db.Users.Where(p => Criterion == null || p.Nickname.StartsWith(Criterion)).ToList());
         }
+
 
         //
         // GET: /Users/Details/5

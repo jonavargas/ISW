@@ -1,4 +1,4 @@
-﻿@model Data3.ProductSuppliers
+﻿@model Data.ProductSuppliers
 
 @{
     ViewBag.Title = "Delete";
@@ -25,10 +25,10 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Suppliers.Address)
+         @Html.DisplayNameFor(model => model.Suppliers.Name)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Suppliers.Address)
+        @Html.DisplayFor(model => model.Suppliers.Name)
     </div>
 </fieldset>
 @using (Html.BeginForm()) {

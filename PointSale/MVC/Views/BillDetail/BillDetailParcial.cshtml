@@ -1,22 +1,24 @@
-﻿@model IEnumerable<Data3.BillDetail>
-
+﻿
+@model IEnumerable<Data.BillDetail>
 <div id="BillDetailList">
+
+
     <table class="table table-bordered">
         <tr>
             <th>
-                Bill Number
+               Bill Number
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Code)
             </th>
             <th>
-               Product
+                @Html.DisplayNameFor(model => model.Product)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Qty)
             </th>
             <th>
-                Unit Cost
+               Unit Cost
             </th>
             <th></th>
         </tr>
@@ -51,4 +53,3 @@
 
 
 </div>
-

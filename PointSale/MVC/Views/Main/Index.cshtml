@@ -1,25 +1,23 @@
-﻿@model IEnumerable<Data3.Products>
+﻿@model IEnumerable<Data.Products>
 
-@{
-    ViewBag.Title = "Index";
-}
+    @{
+        ViewBag.Title = "Main";
+    }
 
-<h2>Index</h2>
+    <h2>List Products</h2>
 
 
-@using (Ajax.BeginForm(new AjaxOptions { 
-
-    HttpMethod="get",
-    InsertionMode =InsertionMode.Replace, 
-    UpdateTargetId="MainProductsList"
-
-                                                    }))
+    @using (Ajax.BeginForm(new AjaxOptions
 {
-<input  type="text" name="Criterion" />
-    <input  type="submit" value="Search"  id="Search"/>
 
-}
-@Html.Partial("MainProductsParcial")
+    HttpMethod = "get",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "MainProductsList"
 
+}))
+    {
+        <input type="text" name="Criterion" />
+        <input type="submit" value="Search" id="Search" />
 
-
+    }
+    @Html.Partial("MainProductsParcial")

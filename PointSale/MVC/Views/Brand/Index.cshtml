@@ -1,14 +1,15 @@
-﻿@model IEnumerable<Data3.Brand>
+﻿@model IEnumerable<Data.Brand>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Brand";
 }
 
-<h2>Index</h2>
+<h2>Brand</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 @using (Ajax.BeginForm(new AjaxOptions
 {
 
@@ -23,7 +24,4 @@
 
 }
 @Html.Partial("BrandParcial")
-
-
-
 

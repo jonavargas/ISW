@@ -1,9 +1,0 @@
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\bin\Debug\Data3.dll.config
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\bin\Debug\Data3.dll
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\bin\Debug\Data3.pdb
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\bin\Debug\EntityFramework.dll
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\bin\Debug\EntityFramework.xml
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\bin\Debug\es\EntityFramework.resources.dll
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\obj\Debug\Data3.csprojResolveAssemblyReference.cache
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\obj\Debug\Data3.dll
-C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\obj\Debug\Data3.pdb

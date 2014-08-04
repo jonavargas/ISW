@@ -1,16 +1,15 @@
-﻿@model IEnumerable<Data3.Bill>
+﻿@model IEnumerable<Data.Bill>
 
 <div id="BillList">
+
+
     <table class="table table-bordered">
         <tr>
-            <th>
-              Num Bill
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Date)
             </th>
             <th>
-                Client
+               Client
             </th>
             <th>
                 Employee
@@ -36,9 +35,6 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
@@ -73,5 +69,5 @@
 
     </table>
 
-</div>
 
+</div>

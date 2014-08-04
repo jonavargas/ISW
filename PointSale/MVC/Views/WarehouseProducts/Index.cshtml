@@ -1,14 +1,15 @@
-﻿@model IEnumerable<Data3.WarehouseProducts>
+﻿@model IEnumerable<Data.WarehouseProducts>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Warehouse Products";
 }
 
-<h2>Index</h2>
+<h2>Warehouse Products</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 
 @using (Ajax.BeginForm(new AjaxOptions
 {
@@ -24,4 +25,6 @@
 
 }
 @Html.Partial("WarehouseProductsParcial")
+
+
 

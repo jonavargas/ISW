@@ -1,17 +1,19 @@
-﻿@model IEnumerable<Data3.WarehouseProducts>
+﻿
+@model IEnumerable<Data.WarehouseProducts>
 
 <div id="WarehouseProductsList">
+
 
     <table class="table table-bordered">
         <tr>
             <th>
-                Product
+               Product
             </th>
             <th>
                 Qty Available
             </th>
             <th>
-                Warehouse
+               Warehouse
             </th>
             <th></th>
         </tr>
@@ -26,7 +28,7 @@
                     @Html.DisplayFor(modelItem => item.QtyAvailable)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Warehouse1.Id)
+                    @Html.DisplayFor(modelItem => item.Warehouse1.Description)
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
@@ -40,4 +42,3 @@
 
 
 </div>
-

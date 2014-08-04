@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data3;
+using Data;
 
 namespace MVC.Controllers
 {
@@ -22,10 +22,10 @@ namespace MVC.Controllers
 
             if (Request.IsAjaxRequest())
             {
-                return PartialView("ProductSuppliersParcial", productsuppliers.Where(p => Criterion == null || p.Supplier.StartsWith(Criterion)).ToList());
+                return PartialView("ProductSuppliersParcial", productsuppliers.Where(p => Criterion == null || p.Suppliers.Name.StartsWith(Criterion)).ToList());
             }
 
-            return View(productsuppliers.Where(p => Criterion == null || p.Supplier.StartsWith(Criterion)).ToList());
+            return View(productsuppliers.Where(p => Criterion == null || p.Suppliers.Name.StartsWith(Criterion)).ToList());
 
 
 
@@ -50,7 +50,7 @@ namespace MVC.Controllers
         public ActionResult Create()
         {
             ViewBag.Product = new SelectList(db.Products, "Id", "Name");
-            ViewBag.Supplier = new SelectList(db.Suppliers, "Name", "Address");
+            ViewBag.Supplier = new SelectList(db.Suppliers, "Id", "Name");
             return View();
         }
 
@@ -69,7 +69,7 @@ namespace MVC.Controllers
             }
 
             ViewBag.Product = new SelectList(db.Products, "Id", "Name", productsuppliers.Product);
-            ViewBag.Supplier = new SelectList(db.Suppliers, "Name", "Address", productsuppliers.Supplier);
+            ViewBag.Supplier = new SelectList(db.Suppliers, "Id", "Name", productsuppliers.Supplier);
             return View(productsuppliers);
         }
 
@@ -84,7 +84,7 @@ namespace MVC.Controllers
                 return HttpNotFound();
             }
             ViewBag.Product = new SelectList(db.Products, "Id", "Name", productsuppliers.Product);
-            ViewBag.Supplier = new SelectList(db.Suppliers, "Name", "Address", productsuppliers.Supplier);
+            ViewBag.Supplier = new SelectList(db.Suppliers, "Id", "Name", productsuppliers.Supplier);
             return View(productsuppliers);
         }
 
@@ -102,7 +102,7 @@ namespace MVC.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.Product = new SelectList(db.Products, "Id", "Name", productsuppliers.Product);
-            ViewBag.Supplier = new SelectList(db.Suppliers, "Name", "Address", productsuppliers.Supplier);
+            ViewBag.Supplier = new SelectList(db.Suppliers, "Id", "Name", productsuppliers.Supplier);
             return View(productsuppliers);
         }
 

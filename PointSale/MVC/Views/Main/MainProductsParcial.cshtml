@@ -1,6 +1,6 @@
-﻿@model IEnumerable<Data3.Products>
-<div id="MainProductsList">
+﻿@model IEnumerable<Data.Products>
 
+<div id="MainProductsList">
 
     <table class="table table-bordered">
         <tr>
@@ -8,10 +8,10 @@
                 Product
             </th>
             <th>
-                Code
+                @Html.DisplayNameFor(model => model.Code)
             </th>
             <th>
-                Cost Price
+                @Html.DisplayNameFor(model => model.CostPrice)
             </th>
             <th>
                 Category
@@ -44,16 +44,11 @@
                     @Html.ActionLink("Add", "Edit", new { id = item.Id })
 
                 </td>
-
-
             </tr>
         }
 
     </table>
 
 
-
-
-
-
 </div>
+

@@ -1,13 +1,15 @@
-﻿@model IEnumerable<Data3.ProductSuppliers>
+﻿
+@model IEnumerable<Data.ProductSuppliers>
+
 <div id="ProductSuppliersList">
 
     <table class="table table-bordered">
         <tr>
             <th>
-                Price
+                @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
-                Product
+               Product
             </th>
             <th>
                 Supplier
@@ -38,5 +40,5 @@
     </table>
 
 
-
 </div>
+

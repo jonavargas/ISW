@@ -1,28 +1,27 @@
-﻿@model IEnumerable<Data3.Products>
+﻿@model IEnumerable<Data.Products>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Products";
 }
 
-<h2>Index</h2>
+<h2>Products</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
-
 </p>
-@using (Ajax.BeginForm(new AjaxOptions { 
 
-    HttpMethod="get",
-    InsertionMode =InsertionMode.Replace, 
-    UpdateTargetId="ProductList"
-
-                                                    }))
+@using (Ajax.BeginForm(new AjaxOptions
 {
-<input  type="text" name="Criterion" />
-    <input  type="submit" value="Search"  id="Search"/>
+
+    HttpMethod = "get",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "ProductsList"
+
+}))
+{
+    <input type="text" name="Criterion" />
+    <input type="submit" value="Search" id="Search" />
 
 }
 @Html.Partial("ProductsParcial")
-
-
 

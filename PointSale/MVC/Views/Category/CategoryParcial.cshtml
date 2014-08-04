@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Data3.Category>
+﻿@model IEnumerable<Data.Category>
 <div id="CategoryList">
 
     <table class="table table-bordered">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+               Category
             </th>
             <th></th>
         </tr>
@@ -16,15 +16,14 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Name }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Name }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Name })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
             </tr>
         }
 
     </table>
-
 
 
 </div>

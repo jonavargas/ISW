@@ -7,7 +7,11 @@ html {
 #MainProductsList{
 background-color:aquamarine;
 width:500px;
-height:500px;    
+height:500px;  
+
+scrollbar-3dlight-color:blue;
+overflow:scroll;
+    
 }
 
 body {

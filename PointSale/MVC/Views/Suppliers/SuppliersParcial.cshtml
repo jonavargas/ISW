@@ -1,10 +1,11 @@
-﻿@model IEnumerable<Data3.Suppliers>
+﻿@model IEnumerable<Data.Suppliers>
 
 <div id="SuppliersList">
+
     <table class="table table-bordered">
         <tr>
             <th>
-                Supplier
+               Supplier
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Telephone)
@@ -15,6 +16,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Detail)
             </th>
+            <th></th>
         </tr>
 
         @foreach (var item in Model)
@@ -33,9 +35,9 @@
                     @Html.DisplayFor(modelItem => item.Detail)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Name }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Name }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Name })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
             </tr>
         }

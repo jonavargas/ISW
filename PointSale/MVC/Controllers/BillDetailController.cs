@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data3;
+using Data;
 
 namespace MVC.Controllers
 {
@@ -28,6 +28,7 @@ namespace MVC.Controllers
             return View(billdetail.Where(p => Criterion == null || p.Bill1.Client1.Name.StartsWith(Criterion)).ToList());
 
         }
+
         //
         // GET: /BillDetail/Details/5
 
