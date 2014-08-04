@@ -1,33 +1,28 @@
 ﻿@model Data3.Users
 
 @{
-    ViewBag.Title = "Delete User";
+    ViewBag.Title = "Delete";
 }
 
-<h2>Delete User</h2>
+<h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <fieldset>
     <legend>Users</legend>
 
-    <table class="table table-hover">
-        <tr>
-            <th>
-                @Html.LabelForModel("User")
-            </th>
-            <th>
-                @Html.LabelForModel("Password")
-            </th>
-        </tr>
-        <tr>
-            <td>
-                @Html.DisplayFor(model => model.Nickname)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Password)
-            </td>
-        </tr>
-    </table>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nickname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nickname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
 </fieldset>
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()

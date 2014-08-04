@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Data3.Users>
 
 @{
-    ViewBag.Title = "Users";
+    ViewBag.Title = "Index";
 }
 
-<h2>Users</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("New User", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
 
 @using (Ajax.BeginForm(new AjaxOptions

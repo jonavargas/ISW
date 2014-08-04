@@ -1,53 +1,50 @@
 ﻿@model Data3.Products
 
 @{
-    ViewBag.Title = "Details Product";
+    ViewBag.Title = "Details";
 }
 
-<h2>Details Product</h2>
+<h2>Details</h2>
 
 <fieldset>
     <legend>Products</legend>
 
-    <table class="table table-hover">
-        <tr>
-            <th>
-                @Html.LabelForModel("Code")
-            </th>
-            <th>
-                @Html.LabelForModel("Product")
-            </th>
-            <th>
-                @Html.LabelForModel("Price")
-            </th>
-            <th>
-                @Html.LabelForModel("Category")
-            </th>
-            <th>
-                @Html.LabelForModel("Brand")
-            </th>
-        </tr>
-        <tr>
-            <td>
-                @Html.DisplayFor(model => model.Code)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.CostPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Category1.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Brand1.Name)
-            </td>
-        </tr>
-    </table>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
 
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Code)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Code)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CostPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CostPrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category1.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category1.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Brand1.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Brand1.Name)
+    </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

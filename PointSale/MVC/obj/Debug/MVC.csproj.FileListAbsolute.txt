@@ -206,6 +206,7 @@ C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\MV
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\MVC.dll
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\MVC.pdb
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\Antlr3.Runtime.dll
+C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\Data2.dll
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\DotNetOpenAuth.AspNet.dll
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\DotNetOpenAuth.Core.dll
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\DotNetOpenAuth.OAuth.Consumer.dll
@@ -234,6 +235,7 @@ C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\Sy
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\WebGrease.dll
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\WebMatrix.Data.dll
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\WebMatrix.WebData.dll
+C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\Data2.pdb
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\EntityFramework.xml
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\Newtonsoft.Json.xml
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\System.Net.Http.Formatting.xml
@@ -305,5 +307,3 @@ C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\obj\De
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\obj\Debug\MVC.pdb
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC\bin\Data3.dll
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\MVC\bin\Data3.pdb
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\Data3.dll
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\MVC\bin\Data3.pdb

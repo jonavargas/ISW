@@ -1,7 +1,7 @@
 ﻿@model Data3.Brand
 
 @{
-    ViewBag.Title = "Create Brand";
+    ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
@@ -14,7 +14,7 @@
         <legend>Brand</legend>
 
         <div class="editor-label">
-            @Html.Label("Name")
+            @Html.LabelFor(model => model.Name)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Name)

@@ -1,55 +1,51 @@
 ﻿@model Data3.Products
 
 @{
-    ViewBag.Title = "Delete Product";
+    ViewBag.Title = "Delete";
 }
 
-<h2>Delete Product</h2>
+<h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <fieldset>
     <legend>Products</legend>
 
-    <table class="table table-hover">
-        <tr>
-            <th>
-                @Html.LabelForModel("Code")
-            </th>
-            <th>
-                @Html.LabelForModel("Product")
-            </th>
-            <th>
-                @Html.LabelForModel("Price")
-            </th>
-            <th>
-                @Html.LabelForModel("Category")
-            </th>
-            <th>
-                @Html.LabelForModel("Brand")
-            </th>
-        </tr>
-        <tr>
-            <td>
-                @Html.DisplayFor(model => model.Code)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.CostPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Category1.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Brand1.Name)
-            </td>
-        </tr>
-    </table>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
 
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Code)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Code)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CostPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CostPrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category1.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category1.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Brand1.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Brand1.Name)
+    </div>
 </fieldset>
-@using (Html.BeginForm())
-{
+@using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     <p>
         <input type="submit" value="Delete" /> |

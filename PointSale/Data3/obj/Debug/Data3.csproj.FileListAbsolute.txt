@@ -7,12 +7,3 @@ C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\bin\Debug\es\EntityFramewo
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\obj\Debug\Data3.csprojResolveAssemblyReference.cache
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\obj\Debug\Data3.dll
 C:\Users\BRYAN19\Documents\GitHub\ISW\PointSale\Data3\obj\Debug\Data3.pdb
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data3\obj\Debug\Data3.csprojResolveAssemblyReference.cache
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data3\obj\Debug\Data3.dll
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data3\obj\Debug\Data3.pdb
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data3\bin\Debug\Data3.dll.config
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data3\bin\Debug\Data3.dll
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data3\bin\Debug\Data3.pdb
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data3\bin\Debug\EntityFramework.dll
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data3\bin\Debug\EntityFramework.xml
-C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data3\bin\Debug\es\EntityFramework.resources.dll

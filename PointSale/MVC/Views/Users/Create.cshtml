@@ -1,10 +1,10 @@
 ﻿@model Data3.Users
 
 @{
-    ViewBag.Title = "Create User";
+    ViewBag.Title = "Create";
 }
 
-<h2>Create User</h2>
+<h2>Create</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -14,7 +14,7 @@
         <legend>Users</legend>
 
         <div class="editor-label">
-            @Html.LabelForModel("User")
+            @Html.LabelFor(model => model.Nickname)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Nickname)
@@ -22,7 +22,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelForModel("Password")
+            @Html.LabelFor(model => model.Password)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Password)
