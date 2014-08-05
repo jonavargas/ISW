@@ -29,13 +29,5 @@ namespace MVC.Controllers
 
             return View(products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
         }
-
-      
-
-
-
-
-
-
     }
 }

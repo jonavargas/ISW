@@ -1,20 +1,29 @@
 ﻿@model Data.Category
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Details Category";
 }
 
-<h2>Details</h2>
+<h2>Details Category</h2>
 
 <fieldset>
     <legend>Category</legend>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Name)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
-    </div>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                @Html.LabelForModel("Name")
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Name)
+            </td>
+        </tr>
+    </table>  
+
+    
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |

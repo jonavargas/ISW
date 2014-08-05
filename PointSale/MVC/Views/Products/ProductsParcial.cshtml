@@ -5,31 +5,30 @@
     <table class="table table-bordered">
         <tr>
             <th>
-               Product
+                Code
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Code)
+                Product
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CostPrice)
+                Cost Price
             </th>
             <th>
                 Category
             </th>
             <th>
-               Brand
-            </th>
-            <th></th>
+                Brand
+            </th>            
         </tr>
 
         @foreach (var item in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.Code)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Code)
+                    @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.CostPrice)
@@ -49,7 +48,4 @@
         }
 
     </table>
-
-
 </div>
-

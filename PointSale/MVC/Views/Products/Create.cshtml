@@ -1,10 +1,10 @@
 ﻿@model Data.Products
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Create Product";
 }
 
-<h2>Create</h2>
+<h2>Create Product</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -12,14 +12,6 @@
 
     <fieldset>
         <legend>Products</legend>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
-            @Html.ValidationMessageFor(model => model.Name)
-        </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Code)
@@ -30,7 +22,15 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.CostPrice)
+            @Html.LabelFor(model => model.Name, "Product")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>        
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CostPrice, "Cost Price")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.CostPrice)
@@ -38,7 +38,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Category, "Category1")
+            @Html.LabelFor(model => model.Category, "Category")
         </div>
         <div class="editor-field">
             @Html.DropDownList("Category", String.Empty)
@@ -46,7 +46,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Brand, "Brand1")
+            @Html.LabelFor(model => model.Brand, "Brand")
         </div>
         <div class="editor-field">
             @Html.DropDownList("Brand", String.Empty)

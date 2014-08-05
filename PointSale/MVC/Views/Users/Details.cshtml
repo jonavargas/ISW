@@ -9,19 +9,24 @@
 <fieldset>
     <legend>Users</legend>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Nickname)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Nickname)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Password)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Password)
-    </div>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                @Html.LabelForModel("User")
+            </th>
+            <th>
+                @Html.LabelForModel("Password")
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Nickname)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Password)
+            </td>
+        </tr>
+    </table>
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |

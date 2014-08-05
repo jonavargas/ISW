@@ -1,10 +1,10 @@
 ﻿@model Data.Client
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Client";
 }
 
-<h2>Edit</h2>
+<h2>Edit Client</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -16,7 +16,7 @@
         @Html.HiddenFor(model => model.Id)
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
+            @Html.LabelForModel("Name")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Name)
@@ -24,7 +24,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Lastname1)
+            @Html.LabelForModel("Last Name 1")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Lastname1)
@@ -32,7 +32,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Lastname2)
+            @Html.LabelForModel("Last Name 2")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Lastname2)
@@ -40,7 +40,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Address)
+            @Html.LabelForModel("Address")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Address)
@@ -48,7 +48,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Telephone)
+            @Html.LabelForModel("Phone")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Telephone)
