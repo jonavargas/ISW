@@ -6,11 +6,12 @@ html {
 
 #MainProductsList{
 background-color:aquamarine;
-width:500px;
+width:600px;
 height:500px;  
-
-scrollbar-3dlight-color:blue;
+scrollbar-3dlight-color:beige;
 overflow:scroll;
+margin-left:20%;
+
     
 }
 
@@ -46,9 +47,7 @@ header, footer, hgroup,
 nav, section {
     display: block;
 }
-.header{
-    background-color:rgba(199, 209, 214, 0.91);
-}
+
 
 mark {
     background-color:rgba(199, 209, 214, 0.91);
@@ -58,10 +57,11 @@ mark {
 
 .float-left {
     float: left;
+
 }
 
 .float-right {
-    float: right;
+    float: right; 
 }
 
 .clear-fix:after {
@@ -85,6 +85,9 @@ h1 {
 
 h2 {
     font-size: 1.75em;
+    text-align:center;
+    color: white; text-shadow: #2AD0DC 0.1em 0.1em 0.2em;
+    
 }
 
 h3 {
@@ -143,7 +146,7 @@ footer {
 /* site title
 ----------------------------------------------------------*/
 .site-title {
-    color: #2ba0cb;
+    color: #4fccf5;
     font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
     font-size: 4em;
     margin-left: 2%;

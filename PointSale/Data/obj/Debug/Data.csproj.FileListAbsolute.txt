@@ -16,3 +16,12 @@ C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\bin\D
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\obj\Debug\Data.dll
 C:\Users\Jonathan\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\obj\Debug\Data.pdb
+C:\Users\Ericka\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\bin\Debug\Data.dll.config
+C:\Users\Ericka\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\bin\Debug\Data.dll
+C:\Users\Ericka\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\bin\Debug\Data.pdb
+C:\Users\Ericka\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\bin\Debug\EntityFramework.dll
+C:\Users\Ericka\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\bin\Debug\EntityFramework.xml
+C:\Users\Ericka\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Ericka\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\Ericka\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\obj\Debug\Data.dll
+C:\Users\Ericka\Documents\Visual Studio 2013\Projects\ISW\PointSale\Data\obj\Debug\Data.pdb
