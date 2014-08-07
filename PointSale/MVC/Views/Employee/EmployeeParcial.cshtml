@@ -2,24 +2,24 @@
 
 <div id="EmployeeList">
 
-    <table class="table table-bordered">
+    <table class="table table-hover , text-center">
         <tr>
             <th>
-                Name
+                <div class="text-center">Name</div>
             </th>
             <th>
-               Last Name 1
+                <div class="text-center">Last Name 1</div>
             </th>
             <th>
-                Last Name 2
+                <div class="text-center">Last Name 2</div>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Address)
+                <div class="text-center">@Html.DisplayNameFor(model => model.Address)</div>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Telephone)
+                <div class="text-center">@Html.DisplayNameFor(model => model.Telephone)</div>
             </th>
-            <th></th>
+
         </tr>
 
         @foreach (var item in Model)

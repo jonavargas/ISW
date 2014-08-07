@@ -1,82 +1,98 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
         <title>@ViewBag.Title - Library Paper Illusions</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
+        <meta name="viewport" content="width=device-width" />        
+       
         @Scripts.Render("~/bundles/modernizr")
         @Styles.Render("~/Content/css/index.css")
         @Styles.Render("~/Content/css/bootstrap.css")
         @Styles.Render("~/Content/css/bootstrap.min.css")
         @Styles.Render("~/Content/css/bootstrap-theme.min.css")
+        @Styles.Render("~/Content/Site.css")
 
     </head>
-    <body>
-       
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Library", "Index", "Main")</p>
-                </div>
+<body>
+
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">@Html.ActionLink("Library", "Index", "Main")</p>
+            </div>
+            <div class="float-right">
                 
-                <div class="float-right">
-                   
-                    <nav>
-                       
-                        
-
-                        
-                        
-                        
-                        
-                      
-                      
-                        <div class="login">
-                            <div class="btn-group">
-                                <button type="button" class="btn-custom" data-toggle="dropdown">
-                                   Login
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" />@Html.ActionLink("Login", "Login", "Users")</li>
-                                    <li><a href="#" />@Html.ActionLink("Logout", "Logout", "Users")</li>
-                                   
-
-                                </ul>
-                            </div>
+                <nav class="navi">
+                    <div class="prod">
+                        <div class="btn-group">
+                            <button type="button" class="btn-custom" data-toggle="dropdown">
+                                Products
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" />@Html.ActionLink("Products", "Index", "Products")</li>
+                                <li>@Html.ActionLink("Category", "Index", "Category")</li>
+                                <li>@Html.ActionLink("Brand", "Index", "Brand")</li>
+                            </ul>
                         </div>
-                
-                      
-                      
-                    </nav>
-                     
-                </div>
+                    </div>
+                    <div class="suplier">
+                        <div class="btn-group">
+                            <button type="button" class="btn-custom" data-toggle="dropdown">
+                                Suppliers
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" /> @Html.ActionLink("Suppliers", "Index", "Suppliers")</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="client">
+                        <div class="btn-group">
+                            <button type="button" class="btn-custom" data-toggle="dropdown">
+                                Client
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" /> @Html.ActionLink("Client", "Index", "Client")</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="emplo">
+                        <div class="btn-group">
+                            <button type="button" class="btn-custom" data-toggle="dropdown">
+                                Employee
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" /> @Html.ActionLink("Employee", "Index", "Employee")</li>
+                            </ul>
+                        </div>
+                    </div>                  
+                </nav>
             </div>
-        
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
 
-                </div>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+
             </div>
-        </footer>
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/jqueryval")
-        @Scripts.Render("~/bundles/jqueryui")
-        @Scripts.Render("~/Scripts/bootstrap.min.js")
-        @RenderSection("scripts", required: false)
-
-        
-
-    </body>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+    @RenderSection("scripts", required: false)
+</body>
 </html>
