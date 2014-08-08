@@ -47,7 +47,7 @@ namespace MVC.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.Bill = new SelectList(db.Bill, "Id", "State");
+            ViewBag.Bill = new SelectList(db.Bill, "Id", "Id");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace MVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Bill = new SelectList(db.Bill, "Id", "State", billdetail.Bill);
+            ViewBag.Bill = new SelectList(db.Bill, "Id", "Id", billdetail.Bill);
             return View(billdetail);
         }
 
