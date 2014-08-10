@@ -11,6 +11,7 @@ namespace Data
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Client
     {
@@ -20,10 +21,17 @@ namespace Data
         }
     
         public int Id { get; set; }
+        [Required(ErrorMessage= "Name is required!!!"), MinLength(2,ErrorMessage="* Name has to contain more than two letters!!!")]
         public string Name { get; set; }
+
+        [Required(ErrorMessage = "Last Name is required!!!"), MinLength(2, ErrorMessage = "* Last Name has to contain more than two letters!!!")]
         public string Lastname1 { get; set; }
+
+        [Required(ErrorMessage = "Last Name is required!!!"), MinLength(2, ErrorMessage = "* Last Name has to contain more than two letters!!!")]
         public string Lastname2 { get; set; }
         public string Address { get; set; }
+
+        [Required(ErrorMessage = "Phone is required!!!")]
         public Nullable<int> Telephone { get; set; }
     
         public virtual ICollection<Bill> Bill { get; set; }

@@ -1,18 +1,18 @@
 ﻿
 
 .client{
-    margin-top: -44.5%;
+    margin-top: -41%;
     margin-left:-370%;
 }
 .emplo{
-    margin-top: -43%;
+    margin-top: -40%;
     margin-left:-285%;
     margin-bottom: 20%;
 }
 
 .prod{
     float:right;
-    margin-top: -1%;
+    margin-top: 1%;
     margin-right: 180%;
 
 }
@@ -57,14 +57,43 @@
    text-decoration: none;
    background-color:hsl(195, 99%, 62%);
 }.degra{
-    background: rgb(201,222,150); /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  rgba(201,222,150,1) 0%, rgba(138,182,107,1) 44%, rgba(57,130,53,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(201,222,150,1)), color-stop(44%,rgba(138,182,107,1)), color-stop(100%,rgba(57,130,53,1))); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  rgba(201,222,150,1) 0%,rgba(138,182,107,1) 44%,rgba(57,130,53,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  rgba(201,222,150,1) 0%,rgba(138,182,107,1) 44%,rgba(57,130,53,1) 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  rgba(201,222,150,1) 0%,rgba(138,182,107,1) 44%,rgba(57,130,53,1) 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center,  rgba(201,222,150,1) 0%,rgba(138,182,107,1) 44%,rgba(57,130,53,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+ background: rgb(167,207,223); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(167,207,223,1)), color-stop(100%,rgba(35,83,138,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
- }
+
+ } 
+
+.site-title a, .site-title a:hover, .site-title a:active {
+    background: none;   
+    color:white;
+    outline: none;
+    text-decoration: none;
+    font-family:'Bernard MT';
+    font-size:1.2em;
  
+}
+.btn-default{
+    border-radius:8px;
+    color:blue;
+    font-family:'Bernard MT';
+    font-size:1.3em;
+}
+
+.required, .texRequired{
+    color: #f60909;
+    font-size: 1.7em;
+    display:inline-block;    
+}
+
+.texRequired {
+    font-size: 1.2em;
+    white-space: inherit;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}

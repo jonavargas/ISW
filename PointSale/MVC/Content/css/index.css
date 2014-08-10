@@ -5,7 +5,15 @@ html {
 }
 
 #MainProductsList{
-background-color:aquamarine;
+background: rgb(254,255,255); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(254,255,255,1)), color-stop(100%,rgba(210,235,249,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 width:600px;
 height:500px;  
 scrollbar-3dlight-color:beige;
@@ -16,7 +24,7 @@ margin-left:20%;
 }
 
 body {
-    background-color: rgba(199, 209, 214, 0.91);
+    background-color: hsl(195, 99%, 62%);
     border-top: solid 10px #000;
     color: #333;
     font-size: .85em;
@@ -84,9 +92,9 @@ h1 {
 }
 
 h2 {
-    font-size: 1.75em;
+    font-size:2em;
     text-align:center;
-    color: white; text-shadow: #2AD0DC 0.1em 0.1em 0.2em;
+    color: white; text-shadow: #125494 0.1em 0.1em 0.2em;
     
 }
 
@@ -116,13 +124,13 @@ h5, h6 {
 }
 
 #body {
-    background-color: rgba(199, 209, 214, 0.91);
+    background-color:rgb(202, 205, 207);
     clear: both;
     padding-bottom: 35px;
 }
 
     .main-content {
-        background: rgba(199, 209, 214, 0.91);
+        background-color:rgb(202, 205, 207);
         padding-left: 10px;
         padding-top: 30px;
     }
@@ -146,7 +154,7 @@ footer {
 /* site title
 ----------------------------------------------------------*/
 .site-title {
-    color: #4fccf5;
+    color: white;
     font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
     font-size: 4em;
     margin-left: 2%;
@@ -154,8 +162,7 @@ footer {
 }
 
 .site-title a, .site-title a:hover, .site-title a:active {
-    background: none;
-    color: #1193c3;
+    background: none;   
     outline: none;
     text-decoration: none;
 }
