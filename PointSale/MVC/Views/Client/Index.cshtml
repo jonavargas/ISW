@@ -5,10 +5,12 @@
 }
 
 <h2>Client</h2>
-
-<p>
-    @Html.ActionLink("New Client", "Create")
-</p>
+<div class="btnDiv">
+    <p>
+        @Html.ActionLink("New Client", "Create", null, new { @class = "btnCreate" })
+    </p>
+    <div class="labelCreate"><b>Add Client</b></div>
+</div>
 
 @using (Ajax.BeginForm(new AjaxOptions
 {

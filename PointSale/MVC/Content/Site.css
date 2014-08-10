@@ -22,10 +22,11 @@
 }
 
 .btn_search {
-    margin-left: 35%;
+    margin-left: 58%;
+    float:right;
     margin-bottom: 5%;
+    margin-top: -7%;
 }
-
 
 .btn-custom {
     background-color: hsl(195, 99%, 62%) !important;
@@ -53,20 +54,20 @@
     margin-top:8%;
 }
 .dropdown-menu:hover{
-   color: #1193c3; 
-   text-decoration: none;
-   background-color:hsl(195, 99%, 62%);
-}.degra{
- background: rgb(167,207,223); /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(167,207,223,1)), color-stop(100%,rgba(35,83,138,1))); /* Chrome,Safari4+ */
-background: -webkit-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Opera 12+ */
-background: -ms-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* IE10+ */
-background: radial-gradient(ellipse at center,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #1193c3; 
+    text-decoration: none;
+    background-color:hsl(195, 99%, 62%);
+}
 
-
+.degra{
+    background: rgb(167,207,223); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(167,207,223,1)), color-stop(100%,rgba(35,83,138,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
  } 
 
 .site-title a, .site-title a:hover, .site-title a:active {
@@ -97,3 +98,51 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', end
     margin-bottom: 2%;
     margin-top: 2%;
 }
+
+.btnCreate /*css de imagen para el btn add client*/
+{
+     text-decoration: none;
+     display: block;
+     width: 48px;
+     height: 48px;
+     background: url(../Images/add_client.png);
+     text-indent: -9999px;
+}
+
+.btnCreateEm { /*css de imagen para el btn add employee*/
+    text-decoration: none;
+     display: block;
+     width: 48px;
+     height: 48px;
+     background: url(../Images/add_employee.png);
+     text-indent: -9999px;
+}
+
+.labelCreate { /*css para ssel nombre del boton create client*/
+    float:left;
+    margin-top: -1%;
+    margin-left: -1.5%;
+}
+
+.labelCreateEm{
+    float:left;
+    margin-top: -1%;
+    margin-left: -2.5%;
+}
+
+.btnDiv {  /*css para el div del boton create*/
+    margin-left: 5%;
+    margin-bottom: 8%;
+}
+
+input {
+    border-color: rgba(35,83,138,1);
+    border-width: 1px;
+    border-radius: 6%;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {   
+border-color: rgb(27, 84, 148);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(27, 84, 148);
+outline: 0 none;}
+
