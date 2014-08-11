@@ -19,7 +19,7 @@
             @Html.LabelFor(model => model.Name, "Supplier Name")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Name) <div class="required">*</div>
+            @Html.EditorFor(model => model.Name)
             @Html.ValidationMessageFor(model => model.Name)
         </div>
 
@@ -27,7 +27,7 @@
             @Html.LabelFor(model => model.Telephone, "Phone")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Telephone) <div class="required">*</div>
+            @Html.EditorFor(model => model.Telephone)
             @Html.ValidationMessageFor(model => model.Telephone)
         </div>
 
@@ -35,7 +35,7 @@
             @Html.LabelFor(model => model.Address)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Address) <div class="required">*</div>
+            @Html.EditorFor(model => model.Address)
             @Html.ValidationMessageFor(model => model.Address)
         </div>
 
@@ -46,7 +46,7 @@
             @Html.EditorFor(model => model.Detail)
             @Html.ValidationMessageFor(model => model.Detail)
         </div>
-        <div class="required">*</div><div class="texRequired">This field is required.</div>
+
         <p>
             <input type="submit" value="Save" />
         </p>
