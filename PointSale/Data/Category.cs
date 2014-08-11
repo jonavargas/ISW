@@ -22,6 +22,7 @@ namespace Data
     
         public int Id { get; set; }
         [Required(ErrorMessage = "The Category Name is required!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string Name { get; set; }
     
         public virtual ICollection<Products> Products { get; set; }
