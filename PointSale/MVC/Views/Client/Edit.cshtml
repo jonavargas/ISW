@@ -19,7 +19,7 @@
             @Html.LabelForModel("Name")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
+            @Html.EditorFor(model => model.Name) <div class="required">*</div>
             @Html.ValidationMessageFor(model => model.Name)
         </div>
 
@@ -27,7 +27,7 @@
             @Html.LabelForModel("Last Name 1")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Lastname1)
+            @Html.EditorFor(model => model.Lastname1) <div class="required">*</div>
             @Html.ValidationMessageFor(model => model.Lastname1)
         </div>
 
@@ -35,7 +35,7 @@
             @Html.LabelForModel("Last Name 2")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Lastname2)
+            @Html.EditorFor(model => model.Lastname2) <div class="required">*</div>
             @Html.ValidationMessageFor(model => model.Lastname2)
         </div>
 
@@ -51,10 +51,10 @@
             @Html.LabelForModel("Phone")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Telephone)
+            @Html.EditorFor(model => model.Telephone) <div class="required">*</div>
             @Html.ValidationMessageFor(model => model.Telephone)
         </div>
-
+        <div class="required">*</div><div class="texRequired">This field is required.</div>
         <p>
             <input type="submit" value="Save" />
         </p>
