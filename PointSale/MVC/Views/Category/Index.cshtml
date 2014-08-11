@@ -5,10 +5,12 @@
 }
 
 <h2>Category</h2>
-
-<p>
-    @Html.ActionLink("New Category", "Create")
-</p>
+<div class="btnDiv">
+    <p>
+        @Html.ActionLink("New Category", "Create", null, new { @class = "btnCreateCat" })
+    </p>
+    <div class="labelCreateCat"><b>Add Category</b></div>
+</div>
 
 @using (Ajax.BeginForm(new AjaxOptions
 {
@@ -21,6 +23,7 @@
 {
     <div class="btn_search">
         <input type="text" name="Criterion" placeholder="Search Category Name" />
+        <span class="glyphicon glyphicon-search , position"></span>
         <input type="submit" class="btn btn-success" value="Search" id="Search" />
     </div>
     

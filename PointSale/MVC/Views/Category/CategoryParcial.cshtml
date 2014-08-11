@@ -15,14 +15,13 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btnEdit" })
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btnDetail" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btnDelete" })
+                    <div class="labelOptions2"><b>Edit      Detail      Delete</b></div>
                 </td>
             </tr>
         }
 
     </table>
-
-
 </div>

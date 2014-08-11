@@ -28,6 +28,13 @@
     margin-top: -7%;
 }
 
+.btn_searchMain {
+    margin-left: 58%;
+    float:right;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
 .btn-custom {
     background-color: hsl(195, 99%, 62%) !important;
     background-repeat: repeat-x;
@@ -45,6 +52,7 @@
     -webkit-font-smoothing: antialiased;
     border-bottom-width:thick;
 }
+
 .img-library{
     background-color: rgba(199, 209, 214, 0.91);   
 }
@@ -79,6 +87,7 @@
     font-size:1.2em;
  
 }
+
 .btn-default{
     border-radius:8px;
     color:blue;
@@ -99,6 +108,7 @@
     margin-top: 2%;
 }
 
+/**********************btnCreate**************************/
 .btnCreate /*css de imagen para el btn add client*/
 {
      text-decoration: none;
@@ -110,7 +120,7 @@
 }
 
 .btnCreateEm { /*css de imagen para el btn add employee*/
-    text-decoration: none;
+     text-decoration: none;
      display: block;
      width: 48px;
      height: 48px;
@@ -118,17 +128,128 @@
      text-indent: -9999px;
 }
 
-.labelCreate { /*css para ssel nombre del boton create client*/
+.btnCreatePro { /*css de imagen para el btn add product*/
+     text-decoration: none;
+     display: block;
+     width: 48px;
+     height: 48px;
+     background: url(../Images/add_product.png);
+     text-indent: -9999px;
+}
+
+.btnCreateSup { /*css de imagen para el btn add supplier*/
+     text-decoration: none;
+     display: block;
+     width: 48px;
+     height: 48px;
+     background: url(../Images/add_supplier.png);
+     text-indent: -9999px;
+}
+
+.btnCreateBra { /*css de imagen para el btn add brand*/
+     text-decoration: none;
+     display: block;
+     width: 48px;
+     height: 48px;
+     background: url(../Images/add_brand.png);
+     text-indent: -9999px;
+}
+
+.btnCreateCat { /*css de imagen para el btn add category*/
+     text-decoration: none;
+     display: block;
+     width: 32px;
+     height: 32px;
+     background: url(../Images/add_category.png);
+     text-indent: -9999px;
+}
+/**********************btnCreate**************************/
+
+/**********************btnEdit**************************/
+.btnEdit {
+     text-decoration: none;
+     display: inline-block;
+     width: 32px;
+     height: 32px;
+     background: url(../Images/edit.png);
+     text-indent: -9999px;
+     margin-right: 27px;
+     margin-left:-39%;
+}
+/**********************btnEdit**************************/
+
+/**********************btnDetail**************************/
+.btnDetail {
+     text-decoration: none;
+     display: inline-block;
+     width: 32px;
+     height: 32px;
+     background: url(../Images/detail.png);
+     text-indent: -9999px;
+     margin-right: 30px;
+}
+/**********************btnDetail**************************/
+
+/**********************btnDelete**************************/
+.btnDelete {
+     text-decoration: none;
+     display: inline-block;
+     width: 32px;
+     height: 32px;
+     background: url(../Images/delete.png);
+     text-indent: -9999px;
+}
+/**********************btnDelete**************************/
+
+/**********************Label**************************/
+.labelCreate { /*css para el nombre del boton create client*/
     float:left;
     margin-top: -1%;
     margin-left: -1.5%;
 }
 
-.labelCreateEm{
+.labelCreateEm{ /*css para el nombre del boton create employee*/
     float:left;
     margin-top: -1%;
     margin-left: -2.5%;
 }
+
+.labelCreatePro { /*css para el nombre del boton create product*/
+    float:left;
+    margin-top: -1%;
+    margin-left: -2.3%;
+}
+
+.labelCreateSup{ /*css para el nombre del boton create supplier*/
+    float:left;
+    margin-top: -1%;
+    margin-left: -2.3%;
+}
+
+.labelCreateBra { /*css para el nombre del boton create brand*/
+    float:left;
+    margin-top: -1%;
+    margin-left: -1.5%;
+}
+
+.labelCreateCat { /*css para el nombre del boton create category*/
+    float:left;
+    margin-top: -1%;
+    margin-left: -2.5%;
+}
+
+.labelOptions { /*css para el nombre de los botones edit, detail, delete de products, employee, suppliers, client*/
+    margin-top: 2%;
+    margin-left: -80px;
+    white-space: pre;
+}
+
+.labelOptions2 { /*css para el nombre de los botones edit, detail, delete de brand y category*/
+    margin-top: 2%;
+    margin-left: -200px;
+    white-space: pre;
+}
+/**********************Label**************************/
 
 .btnDiv {  /*css para el div del boton create*/
     margin-left: 5%;
@@ -142,7 +263,14 @@ input {
 }
 
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {   
-border-color: rgb(27, 84, 148);
-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(27, 84, 148);
-outline: 0 none;}
+    border-color: rgb(27, 84, 148);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(27, 84, 148);
+    outline: 0 none;
+}
 
+.position {  /*css para el glyphs de la barra de busqueda*/
+    float:inherit;
+    margin-right: 26%;
+    margin-top: -7%;
+    color:#1193c3;
+}

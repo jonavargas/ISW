@@ -6,9 +6,12 @@
 
 <h2>Suppliers</h2>
 
-<p>
-    @Html.ActionLink("New Supplier", "Create")
-</p>
+<div class="btnDiv">
+    <p>
+        @Html.ActionLink("New Supplier", "Create", null, new { @class = "btnCreateSup" })
+    </p>
+    <div class="labelCreateSup"><b>Add Supplier</b></div>
+</div>
 
 @using (Ajax.BeginForm(new AjaxOptions
 {
@@ -21,6 +24,7 @@
 {
     <div class="btn_search">
         <input type="text" name="Criterion" placeholder="Search Supplier Name" />
+        <span class="glyphicon glyphicon-search , position"></span>
         <input type="submit" class="btn btn-success" value="Search" id="Search" />
     </div>
     
