@@ -22,16 +22,20 @@ namespace Data
     
         public int Id { get; set; }
         [Required(ErrorMessage= "The Client Name is required!!!"), MinLength(2,ErrorMessage="* The Name has to contain more than two letters!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "The first Last Name is required!!!"), MinLength(2, ErrorMessage = "* The first Last Name has to contain more than two letters!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string Lastname1 { get; set; }
 
         [Required(ErrorMessage = "Last second Last Name is required!!!"), MinLength(2, ErrorMessage = "* The second Last Name has to contain more than two letters!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string Lastname2 { get; set; }
         public string Address { get; set; }
 
-        [Required(ErrorMessage = " The Phone number is required!!! - Only numbers are allowed in this field!!!")]
+        [Required(ErrorMessage = " The Phone number is required!!!- Only numbers are allowed in this field!!!")]
+        [RegularExpression(@"^[0-9]{1,8}", ErrorMessage = "Invalid Characters.")]
         public Nullable<int> Telephone { get; set; }
     
         public virtual ICollection<Bill> Bill { get; set; }
