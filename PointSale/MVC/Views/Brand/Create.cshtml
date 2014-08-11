@@ -17,10 +17,10 @@
             @Html.LabelFor(model => model.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
+            @Html.EditorFor(model => model.Name) <div class="required">*</div>
             @Html.ValidationMessageFor(model => model.Name)
         </div>
-
+        <div class="required">*</div><div class="texRequired">This field is required.</div>
         <p>
             <input type="submit" value="Create" />
         </p>
