@@ -11,6 +11,7 @@ namespace Data
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Suppliers
     {
@@ -20,9 +21,19 @@ namespace Data
         }
     
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "The Supplier Name is required!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string Name { get; set; }
+
+        [Required(ErrorMessage = " The Phone number is required!!!- Only numbers are allowed in this field!!!")]
+        [RegularExpression(@"^[0-9]{1,8}", ErrorMessage = "Invalid Characters.")]
         public Nullable<int> Telephone { get; set; }
+
+        [Required(ErrorMessage = "The Address is required!!!")]
+
         public string Address { get; set; }
+
         public string Detail { get; set; }
     
         public virtual ICollection<ProductSuppliers> ProductSuppliers { get; set; }
