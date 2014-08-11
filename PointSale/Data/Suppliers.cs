@@ -27,7 +27,7 @@ namespace Data
         public string Name { get; set; }
 
         [Required(ErrorMessage = " The Phone number is required!!!- Only numbers are allowed in this field!!!")]
-        [RegularExpression(@"^[0-9]{1,8}", ErrorMessage = "Invalid Characters.")]
+        [RegularExpression(@"^[0-9]{8,8}", ErrorMessage = "Required  8 numeric digits.")]
         public Nullable<int> Telephone { get; set; }
 
         [Required(ErrorMessage = "The Address is required!!!")]
