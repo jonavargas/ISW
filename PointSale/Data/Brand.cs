@@ -11,6 +11,7 @@ namespace Data
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Brand
     {
@@ -20,6 +21,7 @@ namespace Data
         }
     
         public int Id { get; set; }
+        [Required(ErrorMessage = "The Brand Name is required!!!")]
         public string Name { get; set; }
     
         public virtual ICollection<Products> Products { get; set; }

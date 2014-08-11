@@ -11,6 +11,7 @@ namespace Data
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Products
     {
@@ -21,13 +22,19 @@ namespace Data
         }
     
         public int Id { get; set; }
+        [Required(ErrorMessage = "The Product Name is required!!!")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "The Code is required!!!")]
         public string Code { get; set; }
+        [Required(ErrorMessage = "The Price is required!!!")]
         public string CostPrice { get; set; }
+        [Required(ErrorMessage = "The Category is required!!!")]
         public int Category { get; set; }
+        [Required(ErrorMessage = "The Brand is required!!!")]
         public int Brand { get; set; }
-    
+        [Required(ErrorMessage = "The Brand is required!!!")]
         public virtual Brand Brand1 { get; set; }
+        [Required(ErrorMessage = "The Category is required!!!")]
         public virtual Category Category1 { get; set; }
         public virtual ICollection<ProductSuppliers> ProductSuppliers { get; set; }
         public virtual ICollection<WarehouseProducts> WarehouseProducts { get; set; }
