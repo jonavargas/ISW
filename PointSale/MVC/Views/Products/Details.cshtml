@@ -47,6 +47,8 @@
     </table>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btnBack" })
+    <div class="labelBack2"><b>Back</b></div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btnEdit2" })
+    <div class="labelEdit"><b>Edit</b></div>
 </p>
