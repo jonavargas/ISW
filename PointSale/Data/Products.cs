@@ -21,9 +21,10 @@ namespace Data
             this.ProductSuppliers = new HashSet<ProductSuppliers>();
             this.WarehouseProducts = new HashSet<WarehouseProducts>();
         }
-    
+
         public int Id { get; set; }
-        [Required(ErrorMessage = "The Product Name is required!!!")]
+        [Required(ErrorMessage = "The Name is required!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string Name { get; set; }
         [Required(ErrorMessage = "The Code is required!!!")]
         public string Code { get; set; }
