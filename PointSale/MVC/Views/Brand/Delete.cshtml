@@ -13,7 +13,7 @@
     <table class="table table-bordered">
         <tr>
             <th>
-                @Html.LabelForModel("Name")
+                Name
             </th>
         </tr>
         <tr>
@@ -26,8 +26,12 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
+    <div class="btnBackPosition2">
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btnBack" })
+    <div class="labelBack"><b>Back</b></div>
+        
+    </div>
+    <p>        
+        <div class="btnPosition"><input type="submit" value="Delete" class="btn btn-danger" /></div>
     </p>
 }

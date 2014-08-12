@@ -54,14 +54,16 @@
         </div>
         <div class="required">*</div><div class="texRequired">This field is required.</div>
         <p> 
-            <input type="submit" value="Create" />
+            <div class="btnPosition"><input type="submit" value="Create" class="btn btn-primary" /></div> 
         </p>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <div class="btnBackPosition">
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btnBack" })
+        <div class="labelBack"><b>Back</b></div>
+    </div>
+    
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

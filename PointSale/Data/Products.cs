@@ -21,23 +21,20 @@ namespace Data
             this.ProductSuppliers = new HashSet<ProductSuppliers>();
             this.WarehouseProducts = new HashSet<WarehouseProducts>();
         }
-    
+
         public int Id { get; set; }
-         [Required(ErrorMessage = "The Name is required!!!")]
-         [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
+        [Required(ErrorMessage = "The Name is required!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string Name { get; set; }
         [Required(ErrorMessage = "The Code is required!!!")]
         public string Code { get; set; }
         [Required(ErrorMessage = "The Price is required!!!")]
-        [RegularExpression(@"^[0-9]?[0-9](.[0-9][0-9])$", ErrorMessage = "Invalid Characters.")]
         public string CostPrice { get; set; }
         [Required(ErrorMessage = "The Category is required!!!")]
         public int Category { get; set; }
         [Required(ErrorMessage = "The Brand is required!!!")]
         public int Brand { get; set; }
-        [Required(ErrorMessage = "The Brand is required!!!")]
         public virtual Brand Brand1 { get; set; }
-        [Required(ErrorMessage = "The Category is required!!!")]
         public virtual Category Category1 { get; set; }
         public virtual ICollection<ProductSuppliers> ProductSuppliers { get; set; }
         public virtual ICollection<WarehouseProducts> WarehouseProducts { get; set; }
