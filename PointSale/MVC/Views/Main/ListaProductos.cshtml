@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Data.Products>
+@{
+    ViewBag.Title = "ListaProductos";
+}
+
+<h2>ListaProductos</h2>
+
+<table class="table table-hover , text-center">
+    <tr>
+        <th>
+            <div class="text-center">Product Name</div>
+        </th>
+        <th>
+            <div class="text-center">@Html.DisplayNameFor(model => model.Code)</div>
+        </th>
+        <th>
+            <div class="text-center">@Html.DisplayNameFor(model => model.CostPrice)</div>
+        </th>
+        <th>
+            <div class="text-center">Category</div>
+        </th>
+        <th>
+            <div class="text-center">Brand</div>
+        </th>
+    </tr>
+
+   
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category1.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand1.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Add", "ListaProductos", new { id = item.Id })
+
+            </td>
+        </tr>
+    }
+    
+
+</table>
+
+
+</div>
+
