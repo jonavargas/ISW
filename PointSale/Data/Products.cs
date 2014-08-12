@@ -33,9 +33,7 @@ namespace Data
         public int Category { get; set; }
         [Required(ErrorMessage = "The Brand is required!!!")]
         public int Brand { get; set; }
-        [Required(ErrorMessage = "The Brand is required!!!")]
         public virtual Brand Brand1 { get; set; }
-        [Required(ErrorMessage = "The Category is required!!!")]
         public virtual Category Category1 { get; set; }
         public virtual ICollection<ProductSuppliers> ProductSuppliers { get; set; }
         public virtual ICollection<WarehouseProducts> WarehouseProducts { get; set; }
