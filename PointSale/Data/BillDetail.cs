@@ -11,13 +11,18 @@ namespace Data
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class BillDetail
     {
         public int Bill { get; set; }
         public Nullable<int> Code { get; set; }
+        [Required(ErrorMessage = "The Product is required!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string Product { get; set; }
+        [RegularExpression(@"^[0-9]{1,9}$", ErrorMessage = "Required   numeric digits.")]
         public Nullable<int> Qty { get; set; }
+        [RegularExpression(@"^[0-9]{0,9}$", ErrorMessage = "Required   numeric digits.")]
         public Nullable<int> UnitCost { get; set; }
     
         public virtual Bill Bill1 { get; set; }

@@ -14,6 +14,8 @@ namespace MVC.Controllers
 {
     public class MainController : Controller
     {
+
+
         private PointSaleEntities db = new PointSaleEntities();
         //
         // GET: /Main/

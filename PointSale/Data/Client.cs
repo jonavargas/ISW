@@ -32,10 +32,11 @@ namespace Data
         [Required(ErrorMessage = "Last second Last Name is required!!!"), MinLength(2, ErrorMessage = "* The second Last Name has to contain more than two letters!!!")]
         [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string Lastname2 { get; set; }
+        [RegularExpression(@"^[A-Z0-9 a-z]*$", ErrorMessage = "Invalid Characters.")]
         public string Address { get; set; }
 
         [Required(ErrorMessage = " The Phone number is required!!!- Only numbers are allowed in this field!!!")]
-        [RegularExpression(@"^[0-9]{8,8}", ErrorMessage = "Required  8 numeric digits.")]
+        [RegularExpression(@"^[0-9]{8,8}$", ErrorMessage = "Required  8 numeric digits.")]
         public Nullable<int> Telephone { get; set; }
     
         public virtual ICollection<Bill> Bill { get; set; }
