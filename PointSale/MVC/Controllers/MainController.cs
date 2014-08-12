@@ -17,6 +17,7 @@ namespace MVC.Controllers
 
 
         private PointSaleEntities db = new PointSaleEntities();
+        static List<Products> listaProductos=new List<Products>();
         //
         // GET: /Main/
 
@@ -30,6 +31,16 @@ namespace MVC.Controllers
             }
 
             return View(products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
+        }
+
+        public ActionResult ListaProductos(int id=0)
+        {
+            Products products = db.Products.Find(id);
+
+            listaProductos.Add(products);
+
+
+            return View(listaProductos);
         }
     }
 }

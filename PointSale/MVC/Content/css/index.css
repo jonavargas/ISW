@@ -16,10 +16,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', end
 
 width:600px;
 height:500px;  
-scrollbar-3dlight-color:beige;
-overflow:scroll;
-margin-left:20%;
 
+overflow:scroll;
+
+float:right;
     
 }
 
