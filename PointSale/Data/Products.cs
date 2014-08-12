@@ -29,6 +29,7 @@ namespace Data
         [Required(ErrorMessage = "The Code is required!!!")]
         public string Code { get; set; }
         [Required(ErrorMessage = "The Price is required!!!")]
+        [RegularExpression(@"^[0-9]{0,9}$", ErrorMessage = "Required   numeric digits.")]
         public string CostPrice { get; set; }
         [Required(ErrorMessage = "The Category is required!!!")]
         public int Category { get; set; }

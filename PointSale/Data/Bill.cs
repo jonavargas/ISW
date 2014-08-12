@@ -11,17 +11,30 @@ namespace Data
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Bill
     {
         public int Id { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
+        [Required(ErrorMessage = "The Client is required!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public Nullable<int> Client { get; set; }
+        [Required(ErrorMessage = "The Employee is required!!!")]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public Nullable<int> Employee { get; set; }
+        [Required(ErrorMessage = " The Tax is required!!!- Only numbers are allowed in this field!!!")]
+        [RegularExpression(@"^[0-9]{1,2}", ErrorMessage = "Required minimum of 1 digit and maximum 2.")]
         public Nullable<int> Tax { get; set; }
+         [RegularExpression(@"^[0-9]{1,2}$", ErrorMessage = "Required minimum of 1 digit and maximum 2.")]
         public Nullable<int> Discount { get; set; }
+        [Required(ErrorMessage = " The Subtotal is required!!!- Only numbers are allowed in this field!!!")]
+          [RegularExpression(@"^[0-9]{0,9}$", ErrorMessage = "Required minimum of 1 digit .")]
         public Nullable<int> SubTotal { get; set; }
+        [Required(ErrorMessage = " The Total is required!!!- Only numbers are allowed in this field!!!")]
+       [RegularExpression(@"^[0-9]{0,9}$", ErrorMessage = "Required minimum of 1 digit .")]
         public Nullable<int> Total { get; set; }
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Invalid Characters.")]
         public string State { get; set; }
     
         public virtual Client Client1 { get; set; }
