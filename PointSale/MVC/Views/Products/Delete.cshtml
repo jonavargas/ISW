@@ -13,19 +13,19 @@
     <table class="table table-bordered">
         <tr>
             <th>
-                @Html.LabelForModel("Code")
+                Code
             </th>
             <th>
-                @Html.LabelForModel("Product")
+                Product
             </th>
             <th>
-                @Html.LabelForModel("Price")
+                Price
             </th>
             <th>
-                @Html.LabelForModel("Category")
+                Category
             </th>
             <th>
-                @Html.LabelForModel("Brand")
+                Brand
             </th>
         </tr>
         <tr>
@@ -49,8 +49,12 @@
 </fieldset>
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
-    <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
+    <div class="btnBackPosition2">
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btnBack" })
+        <div class="labelBack"><b>Back</b></div>
+        
+    </div>
+    <p>        
+        <div class="btnPosition"><input type="submit" value="Delete" class="btn btn-danger" /></div>
     </p>
 }

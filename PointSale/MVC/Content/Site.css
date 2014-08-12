@@ -1,6 +1,4 @@
-﻿
-
-.client{
+﻿.client{
     margin-top: -41%;
     margin-left:-370%;
 }
@@ -166,7 +164,7 @@
 /**********************btnCreate**************************/
 
 /**********************btnEdit**************************/
-.btnEdit {
+.btnEdit { /*css para el btn edit de las tablas en las pestañas index*/
      text-decoration: none;
      display: inline-block;
      width: 32px;
@@ -175,6 +173,15 @@
      text-indent: -9999px;
      margin-right: 27px;
      margin-left:-39%;
+}
+
+.btnEdit2 { /*css para el btn edit que esta dentro de las paginas de detail*/
+     text-decoration: none;
+     display: inline-block;
+     width: 32px;
+     height: 32px;
+     background: url(../Images/edit.png);
+     text-indent: -9999px;
 }
 /**********************btnEdit**************************/
 
@@ -273,4 +280,50 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     margin-right: 26%;
     margin-top: -7%;
     color:#1193c3;
+}
+
+/********************btn Back*************************/
+.btnBack {
+     text-decoration: none;
+     display: block;
+     width: 48px;
+     height: 48px;
+     background: url(../Images/back.png);
+     text-indent: -9999px;
+}
+
+.btnPosition { /*posicion de btn create y btn edit*/
+    float:right;
+    margin-right: 85%;
+}
+
+.btnBackPosition {
+     float: left;
+     margin-top: -5%;
+}
+
+.btnBackPosition2 {
+     float: left;
+     margin-top: -1%;
+}
+
+.btnEdit2 { /*css del btn de edotar dentro de details*/
+    float: left;
+    margin-top: -7.2%;
+    margin-left: 10%;
+}
+/********************btn Back*************************/
+
+.labelBack {
+    margin-left: 20%;
+}
+
+.labelBack2 {
+    margin-left: 1%;
+}
+
+.labelEdit {
+    margin-left: 10%;
+    margin-top: -2.1%;
+    float: left;
 }

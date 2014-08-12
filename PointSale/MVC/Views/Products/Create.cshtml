@@ -27,7 +27,7 @@
         <div class="editor-field">
             @Html.EditorFor(model => model.Name) <div class="required">*</div>
             @Html.ValidationMessageFor(model => model.Name)
-        </div>        
+        </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.CostPrice, "Price")
@@ -54,13 +54,14 @@
         </div>
         <div class="required">*</div><div class="texRequired">This field is required.</div>
         <p>
-            <input type="submit" value="Create" />
+            <div class="btnPosition"><input type="submit" value="Create" class="btn btn-primary" /></div>
         </p>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="btnBackPosition">
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btnBack" })
+    <div class="labelBack"><b>Back</b></div>
 </div>
 
 @section Scripts {
