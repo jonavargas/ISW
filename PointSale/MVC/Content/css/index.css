@@ -3,7 +3,10 @@ html {
     margin: 0;
     padding: 0;
 }
-
+.Qty{
+    width:50px;
+    height:30px;
+}
 #MainProductsList{
 background: rgb(254,255,255); /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6+ */

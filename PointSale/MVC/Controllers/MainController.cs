@@ -29,11 +29,12 @@ namespace MVC.Controllers
             {
                 return PartialView("MainProductsParcial", products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
             }
+         
 
             return View(products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
         }
 
-        public ActionResult ListaProductos(int id=0)
+        public ActionResult ListProducts(int id=0)
         {
             Products products = db.Products.Find(id);
 

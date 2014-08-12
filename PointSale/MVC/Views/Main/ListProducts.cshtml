@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Data.Products>
+
+@{
+    ViewBag.Title = "List Products";
+}
+
+<h2>List Products</h2>
+
+<table class="table table-hover , text-center">
+    <tr>
+        <th>
+            <div class="text-center">Code</div>
+        </th>
+        <th>
+            <div class="text-center">Product</div>
+        </th>
+        <th>
+            <div class="text-center">Price</div>
+        </th>
+        <th>
+            <div class="text-center">Qty</div>
+        </th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostPrice)
+            </td>
+            <td>
+                <input class="Qty" id="Text1" type="text" />
+            </td>
+            
+            <td>
+              
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btnDelete" })
+                <div class="labelOptions"><b>        Delete</b></div>
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+
+
+
+

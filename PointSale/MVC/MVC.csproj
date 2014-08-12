@@ -398,7 +398,7 @@
     <Content Include="Views\WarehouseProducts\WarehouseProductsParcial.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Main\MainProductsParcial.cshtml" />
-    <Content Include="Views\Main\ListaProductos.cshtml" />
+    <Content Include="Views\Main\ListProducts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
