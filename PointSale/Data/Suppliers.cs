@@ -31,6 +31,7 @@ namespace Data
         public Nullable<int> Telephone { get; set; }
 
         [Required(ErrorMessage = "The Address is required!!!")]
+        [RegularExpression(@"^[A-Z0-9 a-z]*$", ErrorMessage = "Invalid Characters.")]
         public string Address { get; set; }
 
         public string Detail { get; set; }
