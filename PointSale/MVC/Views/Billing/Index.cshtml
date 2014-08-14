@@ -41,7 +41,7 @@
 
 </head>
 <body>
-    <div class="Contenedor">
+    <div >
 
 
         <div id="Contenedor1" class="Contenedor">
@@ -60,7 +60,7 @@
                     <input type="submit" class="btn btn-success" value="Search" id="Search" />
                 </div>
 
-               
+
             }
             @Html.Partial("BillingParcial")
         </div>
@@ -73,29 +73,33 @@
                 @Html.AntiForgeryToken()
                 @Html.ValidationSummary(true)
 
-               
-            <label>Date</label>
-            <input id="Text1" type="text" value="@Session["fecha"].ToString()" readonly/><br />
-            <label>Client</label>
-            <input id="Text1" type="text" /><br />
-            <label>Employee</label>
-            @Html.DropDownList("Employee", String.Empty)<br />
-            <label>Tax</label>
-            <input id="Text1" type="text"  value="13%" readonly/><br />
-                <label>Discount</label>
-            <input id="Text1" type="text"  value="@ViewBag.Discount" /><br />
 
-            <label>SubTotal</label>
-            <input id="Text1" type="text"  value="@ViewBag.Subtotal"/><br />
-                 <label>Total</label>
-            <input id="Text1" type="text"  value="@ViewBag.Subtotal"/><br />
+                <label>Date</label>
+                <input id="Text1" type="text" value="@Session["fecha"].ToString()" readonly /><br />
+                <label>Client</label>
+                <input id="Text2" type="text" /><br />
+                <label>Employee</label>
+               
                 
-                
-                
-                    <p>
-                        <div class="btnPosition"><input type="submit" value="Create" class="btn btn-primary" /></div>
-                    </p>
-                
+                <div class="empBill">@Html.DropDownList("Employee", String.Empty)</div><br />
+
+                <div class="detailBill">
+                    <label>Tax</label>
+                    <input id="Text3" type="text" value="13%" readonly /><br />
+                    <label>Discount</label>
+                    <input id="Text4" type="text" value="@ViewBag.Discount" /><br />
+
+                    <label>SubTotal</label>
+                    <input id="Text4" type="text" value="@ViewBag.Subtotal" /><br />
+                    <label>Total</label>
+                    <input id="Text5" type="text" value="@ViewBag.Subtotal" /><br />
+                </div>
+
+
+                <p>
+                    <div class="btnPosition"><input type="submit" value="Generate" class="btn btn-primary" id="btnGenerate"/></div>
+                </p>
+
             }
 
 
@@ -108,10 +112,11 @@
 
 
 
-          
-           
 
 
+
+
+        </div>
     </div>
     
 </body>

@@ -396,3 +396,56 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     float: left;
 }
 
+
+
+#Contenedor2 {
+    float: right;
+    margin-top: 17%;
+}
+
+#Text1 {
+    margin-left: 6.8%;
+    margin-bottom: 2%;
+}
+
+.empBill {
+    display:inline-block;
+    margin-left: 1%;
+    width: 23%;
+    margin-bottom: 2%;
+}
+
+#Text2 {
+    margin-left: 5.6%;
+    margin-bottom: 2%;
+}
+
+#Text3 {  /*css tax*/
+    margin-top: 2%;
+    margin-left: 23%;
+    margin-bottom: 1%;
+    width: 40%;
+}
+
+#Text4 { /*discount - subtotal*/
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    width: 40%;
+}
+
+#Text5 { /*total*/
+    margin-top: 1%;
+    margin-left: 18%;
+    margin-bottom: 1%;
+    width: 40%;
+}
+
+.detailBill {
+    width: 35%;
+}
+
+#btnGenerate {
+    margin-left: 315%;
+    margin-top: 10%;
+}
