@@ -32,6 +32,20 @@
             <div class="float-right">
                 
                 <nav class="navi">
+
+                    <div class="bill">
+                        <div class="btn-group">
+                            <button type="button" class="btn-default" data-toggle="dropdown">
+                                Billing
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Billing", "Index", "Billing")</li>
+                                <li>@Html.ActionLink("Bill", "Index", "Bill")</li>
+                                <li>@Html.ActionLink("Bill Detail", "Index", "BillDetail")</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="prod" >
                         <div class="btn-group">
                             <button type="button" class="btn-default" data-toggle="dropdown">
@@ -39,7 +53,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#" />@Html.ActionLink("Products", "Index", "Products")</li>
+                                <li>@Html.ActionLink("Products", "Index", "Products")</li>
                                 <li>@Html.ActionLink("Category", "Index", "Category")</li>
                                 <li>@Html.ActionLink("Brand", "Index", "Brand")</li>
                             </ul>
@@ -52,7 +66,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                               <li><a href="#" /> @Html.ActionLink("Suppliers", "Index", "Suppliers")</li>
+                               <li>@Html.ActionLink("Suppliers", "Index", "Suppliers")</li>
                             </ul>
                         </div>
                     </div>
@@ -63,7 +77,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#" /> @Html.ActionLink("Client", "Index", "Client")</li>
+                                <li>@Html.ActionLink("Client", "Index", "Client")</li>
                             </ul>
                         </div>
                     </div>
@@ -74,7 +88,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#" /> @Html.ActionLink("Employee", "Index", "Employee")</li>
+                                <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
                             </ul>
                         </div>
                     </div>                  

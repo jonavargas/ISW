@@ -7,14 +7,17 @@ using Data;
 using System.Data.Entity;
 using System.Data;
 
+
+
+
 namespace MVC.Controllers
 {
-    public class MainController : Controller
+    public class BillingController : Controller
     {
 
 
         private PointSaleEntities db = new PointSaleEntities();
-        static List<Products> productList = new List<Products>();
+        static List<Products> productList=new List<Products>();
         //
         // GET: /Main/
 
@@ -26,12 +29,12 @@ namespace MVC.Controllers
             {
                 return PartialView("BillingProductsParcial", products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
             }
-
+         
 
             return View(products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
         }
 
-        public ActionResult ListProducts(int id = 0)
+        public ActionResult ListProducts(int id=0)
         {
             Products products = db.Products.Find(id);
 

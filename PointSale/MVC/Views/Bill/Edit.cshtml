@@ -81,13 +81,14 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <div class="btnPosition"><input type="submit" value="Save" class="btn btn-primary" /></div>
         </p>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="btnBackPosition">
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btnBack" })
+    <div class="labelBack"><b>Back</b></div>
 </div>
 
 @section Scripts {

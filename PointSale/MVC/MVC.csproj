@@ -188,6 +188,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\BillingController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProductSuppliersController.cs" />
@@ -399,6 +400,9 @@
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Main\MainProductsParcial.cshtml" />
     <Content Include="Views\Main\ListProducts.cshtml" />
+    <Content Include="Views\Billing\Index.cshtml" />
+    <Content Include="Views\Billing\ListProducts.cshtml" />
+    <Content Include="Views\Billing\BillingParcial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

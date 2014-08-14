@@ -14,7 +14,7 @@
         <legend>BillDetail</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Bill, "Bill1")
+            @Html.LabelFor(model => model.Bill, "Bill")
         </div>
         <div class="editor-field">
             @Html.DropDownList("Bill", String.Empty)
@@ -46,7 +46,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.UnitCost)
+            @Html.LabelFor(model => model.UnitCost, "Price")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.UnitCost)
@@ -54,13 +54,14 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <div class="btnPosition"><input type="submit" value="Create" class="btn btn-primary" /></div>
         </p>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="btnBackPosition">
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btnBack" })
+    <div class="labelBack"><b>Back</b></div>
 </div>
 
 @section Scripts {

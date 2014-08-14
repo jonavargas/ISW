@@ -6,9 +6,12 @@
 
 <h2>Bill Detail</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="btnDiv">
+    <p>
+        @Html.ActionLink("New Bill Detail", "Create", null, new { @class = "btnCreateBD" })
+    </p>
+    <div class="labelCreateBD"><b>Add Category</b></div>
+</div>
 
 @using (Ajax.BeginForm(new AjaxOptions
 {
@@ -19,8 +22,11 @@
 
 }))
 {
-    <input type="text" name="Criterion" />
-    <input type="submit" value="Search" id="Search" />
+    <div class="btn_search">
+        <input type="text" name="Criterion" placeholder="Search Bill Detail" />
+        <span class="glyphicon glyphicon-search , position"></span>
+        <input type="submit" class="btn btn-success" value="Search" id="Search" />
+    </div>
 
 }
 @Html.Partial("BillDetailParcial")

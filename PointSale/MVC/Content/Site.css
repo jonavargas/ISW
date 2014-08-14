@@ -1,4 +1,11 @@
-﻿.client{
+﻿.bill {
+    margin-top: 29%;
+    margin-left:-457%;
+    margin-bottom: -53%;
+}
+
+
+.client{
     margin-top: -41%;
     margin-left:-370%;
 }
@@ -10,12 +17,12 @@
 
 .prod{
     float:right;
-    margin-top: 1%;
+    margin-top: 13%;
     margin-right: 180%;
 
 }
 .suplier{
-    margin-top: 16%;
+    margin-top: 14.3%;
     margin-left:-67%;
 }
 
@@ -59,10 +66,16 @@
     margin-left:18%;
     margin-top:8%;
 }
+
+.dropdown-menu {
+    font-family:Calibri;
+    font-size: 1.2em;
+    background-color: rgb(85, 147, 168);
+}
+
 .dropdown-menu:hover{
-    color: #1193c3; 
     text-decoration: none;
-    background-color:hsl(195, 99%, 62%);
+    background-color: rgb(85, 147, 168);
 }
 
 .degra{
@@ -88,9 +101,10 @@
 
 .btn-default{
     border-radius:8px;
-    color:blue;
-    font-family:'Bernard MT';
+    color: #1193c3;
+    font-family:'Calibri';
     font-size:1.3em;
+    background-color: rgba(35,83,138,1);
 }
 
 .required, .texRequired{
@@ -161,6 +175,24 @@
      background: url(../Images/add_category.png);
      text-indent: -9999px;
 }
+
+.btnCreateBill {
+     text-decoration: none;
+     display: block;
+     width: 48px;
+     height: 48px;
+     background: url(../Images/bill.png);
+     text-indent: -9999px;
+}
+
+.btnCreateBD {
+    text-decoration: none;
+     display: block;
+     width: 48px;
+     height: 48px;
+     background: url(../Images/billDetail.png);
+     text-indent: -9999px;
+}
 /**********************btnCreate**************************/
 
 /**********************btnEdit**************************/
@@ -208,6 +240,28 @@
 }
 /**********************btnDelete**************************/
 
+/**********************btnRemove**************************/
+.btnRemove {
+     text-decoration: none;
+     display: inline-block;
+     width: 32px;
+     height: 32px;
+     background: url(../Images/remove.png);
+     text-indent: -9999px;
+}
+/**********************btnRemove**************************/
+
+/**********************btnAdd**************************/
+.btnAdd {
+     text-decoration: none;
+     display: inline-block;
+     width: 32px;
+     height: 32px;
+     background: url(../Images/add.png);
+     text-indent: -9999px;
+}
+/**********************btnAdd**************************/
+
 /**********************Label**************************/
 .labelCreate { /*css para el nombre del boton create client*/
     float:left;
@@ -245,6 +299,18 @@
     margin-left: -2.5%;
 }
 
+.labelCreateBill {
+    float:left;
+    margin-top: -1%;
+    margin-left: 0.1%;
+}
+
+.labelCreateBD {
+    float:left;
+    margin-top: -1%;
+    margin-left: -2%;
+}
+
 .labelOptions { /*css para el nombre de los botones edit, detail, delete de products, employee, suppliers, client*/
     margin-top: 2%;
     margin-left: -80px;
@@ -256,6 +322,8 @@
     margin-left: -200px;
     white-space: pre;
 }
+
+
 /**********************Label**************************/
 
 .btnDiv {  /*css para el div del boton create*/
@@ -327,3 +395,4 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     margin-top: -2.1%;
     float: left;
 }
+

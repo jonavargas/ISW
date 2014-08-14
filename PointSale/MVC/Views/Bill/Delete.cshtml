@@ -66,10 +66,16 @@
         @Html.DisplayFor(model => model.State)
     </div>
 </fieldset>
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
+
+    <div class="btnBackPosition2">
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btnBack" })
+        <div class="labelBack"><b>Back</b></div>
+
+    </div>
     <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
+        <div class="btnPosition"><input type="submit" value="Delete" class="btn btn-danger" /></div>
     </p>
 }

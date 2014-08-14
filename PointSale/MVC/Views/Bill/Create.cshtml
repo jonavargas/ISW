@@ -24,7 +24,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Client, "Client1")
+            @Html.LabelFor(model => model.Client, "Client")
         </div>
         <div class="editor-field">
             @Html.DropDownList("Client", String.Empty)
@@ -32,7 +32,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Employee, "Employee1")
+            @Html.LabelFor(model => model.Employee, "Employee")
         </div>
         <div class="editor-field">
             @Html.DropDownList("Employee", String.Empty)
@@ -56,7 +56,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.SubTotal)
+            @Html.LabelFor(model => model.SubTotal, "Sub Total")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.SubTotal)
@@ -67,7 +67,7 @@
             @Html.LabelFor(model => model.Total)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Total)
+            @Html.EditorFor(model => model.Total) 
             @Html.ValidationMessageFor(model => model.Total)
         </div>
 
@@ -78,15 +78,15 @@
             @Html.EditorFor(model => model.State)
             @Html.ValidationMessageFor(model => model.State)
         </div>
-
         <p>
-            <input type="submit" value="Create" />
+            <div class="btnPosition"><input type="submit" value="Create" class="btn btn-primary" /></div>
         </p>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="btnBackPosition">
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btnBack" })
+    <div class="labelBack"><b>Back</b></div>
 </div>
 
 @section Scripts {

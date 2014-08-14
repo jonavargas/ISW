@@ -7,7 +7,7 @@ html {
     width:50px;
     height:30px;
 }
-#MainProductsList{
+#BillingProductsList{
 background: rgb(254,255,255); /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(254,255,255,1)), color-stop(100%,rgba(210,235,249,1))); /* Chrome,Safari4+ */
@@ -821,7 +821,7 @@ tr.pager td {
 }
 
 .btn-custom {
-    background-color: hsl(195, 99%, 62%) !important;
+    background-color: rgba(199, 209, 214, 0.91) !important;
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#85e0fe", endColorstr="#3ecefe");
     background-image: -khtml-gradient(linear, left top, left bottom, from(#85e0fe), to(#3ecefe));
@@ -845,9 +845,5 @@ tr.pager td {
     margin-left:18%;
     margin-top:8%;
 }
-.dropdown-menu:hover{
-   color: #1193c3; 
-   text-decoration: none;
-   background-color:hsl(195, 99%, 62%);
-}
+
 

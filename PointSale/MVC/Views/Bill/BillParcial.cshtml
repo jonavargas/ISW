@@ -6,30 +6,29 @@
     <table class="table table-bordered">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Date)
+                <div class="text-center">@Html.DisplayNameFor(model => model.Date)</div>
             </th>
             <th>
-               Client
+                <div class="text-center">Client</div>
             </th>
             <th>
-                Employee
+                <div class="text-center">Employee</div>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tax)
+                <div class="text-center">@Html.DisplayNameFor(model => model.Tax)</div>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Discount)
+                <div class="text-center">@Html.DisplayNameFor(model => model.Discount)</div>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SubTotal)
+                <div class="text-center">@Html.DisplayNameFor(model => model.SubTotal)</div>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Total)
+                <div class="text-center">@Html.DisplayNameFor(model => model.Total)</div>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.State)
-            </th>
-            <th></th>
+                <div class="text-center">@Html.DisplayNameFor(model => model.State)</div>
+            </th>          
         </tr>
 
         @foreach (var item in Model)
@@ -60,9 +59,10 @@
                     @Html.DisplayFor(modelItem => item.State)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btnEdit" })
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btnDetail" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btnDelete" })
+                    <div class="labelOptions2"><b>Edit      Detail      Delete</b></div>
                 </td>
             </tr>
         }

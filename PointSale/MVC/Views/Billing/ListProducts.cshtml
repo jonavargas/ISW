@@ -20,7 +20,7 @@
         <th>
             <div class="text-center">Qty</div>
         </th>
-        
+
     </tr>
 
     @foreach (var item in Model)
@@ -38,11 +38,11 @@
             <td>
                 <input class="Qty" id="Text1" type="text" />
             </td>
-            
+
             <td>
-              
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btnDelete" })
-                <div class="labelOptions"><b>        Delete</b></div>
+
+                @Html.ActionLink("Remove", "Delete", new { id = item.Id }, new { @class = "btnRemove" })
+                <div class="labelRemove"><b>Remove</b></div>
             </td>
         </tr>
     }
