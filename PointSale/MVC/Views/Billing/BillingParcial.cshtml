@@ -40,11 +40,12 @@
                     @Html.DisplayFor(modelItem => item.Brand1.Name)
                 </td>
                 <td>
-                    @Html.ActionLink("Add", "ListProducts", new { id = item.Id }, new { @class = "btnAdd" })
+                    @Html.ActionLink("Add", "ListDetail", new { id = item.Id }, new { @class = "btnAdd" })
                     <div class="labelAdd"><b>Add</b></div>
                 </td>
             </tr>
         }
+
 
     </table>
 

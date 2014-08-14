@@ -34,6 +34,11 @@
     @Styles.Render("~/Content/fonts/glyphicons-halflings-regular..woff")
 
     @Styles.Render("~/Content/Site.css")
+
+
+  
+
+
 </head>
 <body>
     <div class="Contenedor">
@@ -61,17 +66,50 @@
         </div>
         <div id="Contenedor2" class="Contenedor">
 
+
+
+            @using (Html.BeginForm("Create", "Billing"))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+               
             <label>Date</label>
             <input id="Text1" type="text" value="@Session["fecha"].ToString()" readonly/><br />
             <label>Client</label>
             <input id="Text1" type="text" /><br />
             <label>Employee</label>
-            @Html.DropDownList("Employee", String.Empty)
+            @Html.DropDownList("Employee", String.Empty)<br />
+            <label>Tax</label>
+            <input id="Text1" type="text"  value="13%" readonly/><br />
+                <label>Discount</label>
+            <input id="Text1" type="text"  value="@ViewBag.Discount" /><br />
+
+            <label>SubTotal</label>
+            <input id="Text1" type="text"  value="@ViewBag.Subtotal"/><br />
+                 <label>Total</label>
+            <input id="Text1" type="text"  value="@ViewBag.Subtotal"/><br />
+                
+                
+                
+                    <p>
+                        <div class="btnPosition"><input type="submit" value="Create" class="btn btn-primary" /></div>
+                    </p>
+                
+            }
 
 
 
 
-        </div>
+
+
+
+
+
+
+
+          
+           
 
 
     </div>
@@ -82,6 +120,7 @@
 @Scripts.Render("~/bundles/jqueryui")
 @Scripts.Render("~/Scripts/bootstrap.min.js")
 </html>
+
 
 
 
