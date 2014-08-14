@@ -27,7 +27,7 @@ namespace MVC.Controllers
             var products = db.Products.Include(p => p.Brand1).Include(p => p.Category1);
             if (Request.IsAjaxRequest())
             {
-                return PartialView("BillingProductsParcial", products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
+                return PartialView("BillingParcial", products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
             }
          
 
