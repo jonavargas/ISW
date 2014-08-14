@@ -29,7 +29,7 @@ namespace MVC.Controllers
             {
                 return PartialView("BillingParcial", products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
             }
-         
+            ViewBag.Employee = new SelectList(db.Employee, "Id", "Name");
 
             return View(products.Where(p => Criterion == null || p.Name.StartsWith(Criterion)).ToList());
         }

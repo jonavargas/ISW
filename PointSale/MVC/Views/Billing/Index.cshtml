@@ -4,8 +4,12 @@
 
 @model IEnumerable<Data.Products>
 
+
 @{
     ViewBag.Title = "Billing";
+}
+@{
+    Session["fecha"] = DateTime.Now;
 }
 
 
@@ -51,17 +55,27 @@
                     <input type="submit" class="btn btn-success" value="Search" id="Search" />
                 </div>
 
-                @Html.Partial("BillingParcial")
+               
             }
-
+            @Html.Partial("BillingParcial")
         </div>
         <div id="Contenedor2" class="Contenedor">
+
+            <label>Date</label>
+            <input id="Text1" type="text" value="@Session["fecha"].ToString()" readonly/><br />
+            <label>Client</label>
+            <input id="Text1" type="text" /><br />
+            <label>Employee</label>
+            @Html.DropDownList("Employee", String.Empty)
+
+
 
 
         </div>
 
 
     </div>
+    
 </body>
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/jqueryval")
