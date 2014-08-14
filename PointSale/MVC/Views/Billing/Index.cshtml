@@ -1,14 +1,29 @@
-﻿@model IEnumerable<Data.Products>
+﻿@{
+    Layout = null;
+}
+
+@model IEnumerable<Data.Products>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Billing";
 }
 
 
-<h2>Products List</h2>
 
 
-@using (Ajax.BeginForm(new AjaxOptions
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="Contenedor">
+
+
+        <div id="Contenedor1" class="Contenedor">
+            @using (Ajax.BeginForm(new AjaxOptions
 {
 
     HttpMethod = "get",
@@ -16,13 +31,27 @@
     UpdateTargetId = "BillingProductsList"
 
 }))
-{
-    <div class="btn_searchMain">
-        <input type="text" name="Criterion" placeholder="Search Product Category" />
-        <span class="glyphicon glyphicon-search , position"></span>
-        <input type="submit" class="btn btn-success" value="Search" id="Search" />
+            {
+                <div class="btn_searchMain">
+                    <input type="text" name="Criterion" placeholder="Search Product Category" />
+                    <span class="glyphicon glyphicon-search , position"></span>
+                    <input type="submit" class="btn btn-success" value="Search" id="Search" />
+                </div>
+
+                @Html.Partial("BillingParcial")
+            }
+
+        </div>
+        <div id="Contenedor2" class="Contenedor">
+
+
+        </div>
+
+
     </div>
+</body>
+</html>
 
 
-}
-@Html.Partial("BillingParcial")
+
+

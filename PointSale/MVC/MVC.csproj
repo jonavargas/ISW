@@ -398,9 +398,9 @@
     <Content Include="Views\WarehouseProducts\Delete.cshtml" />
     <Content Include="Views\WarehouseProducts\WarehouseProductsParcial.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Billing\Index.cshtml" />
     <Content Include="Views\Billing\ListProducts.cshtml" />
     <Content Include="Views\Billing\BillingParcial.cshtml" />
+    <Content Include="Views\Billing\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
