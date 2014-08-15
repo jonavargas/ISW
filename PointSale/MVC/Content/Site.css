@@ -449,3 +449,6 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     margin-left: 315%;
     margin-top: 10%;
 }
+
+
+/*<div class="btnPosition"><input type="submit" value="Generate" class="btn btn-primary" id="btnGenerate"/></div> boton de generar en index billing*/
